@@ -1,0 +1,52 @@
+.tableBodyRow {
+    display: flex;
+    height: 30px;
+    width: 100%;
+}
+
+.tableBody {
+    width: 100%;
+}
+
+.tableBodyRow td {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.transactionHistory {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 5px;
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+    overflow-y: scroll;
+}
+
+.transactionHistory>thead {
+    width: 100%;
+}
+
+.tableHeadRow {
+    text-transform: uppercase;
+    font-size: 12px;
+    display: flex;
+    background-color: aqua;
+    color: white;
+    height: 40px;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.tableHeadRow th {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.tableHeadRow th:nth-child(2) {
+    display: flex;
+    margin: 0 40px 0;
+}

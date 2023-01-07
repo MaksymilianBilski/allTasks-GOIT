@@ -30,7 +30,7 @@ const Profile = ({ avatar, username, tag, location, stats }) => {
 };
 
 Profile.propTypes = {
-  stats: PropTypes.objectOf({
+  stats: PropTypes.shape({
     followers: PropTypes.number,
     views: PropTypes.number,
     likes: PropTypes.number,
