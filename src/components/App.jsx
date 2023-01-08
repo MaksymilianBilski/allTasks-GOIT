@@ -1,5 +1,7 @@
 import { Component } from 'react';
 import { Button } from './Button/Button';
+import { Statistics } from './Statistics/Statistics';
+import { nanoid } from 'nanoid';
 
 export class App extends Component {
   INITIAL_STATE = {
@@ -16,8 +18,9 @@ export class App extends Component {
     return (
       <div>
         {this.buttonTypes.map(el => {
-          return <Button name={el} />;
+          return <Button key={nanoid()} name={el} />;
         })}
+        <Statistics stats={this.buttonTypes} state={this.state} />
       </div>
     );
   }
