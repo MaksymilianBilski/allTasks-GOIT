@@ -16,3 +16,9 @@ class FindContact extends Component {
     );
   }
 }
+
+FindContact.propTypes = {
+
+}
+
+export default FindContact
