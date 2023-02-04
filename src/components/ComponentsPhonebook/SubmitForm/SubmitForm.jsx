@@ -1,11 +1,12 @@
-import PropTypes from 'prop-types';
 import { Component } from 'react';
 
-class Form extends Component {
+class SubmitForm extends Component {
   render() {
-    const { handleChange, handleSubmit } = this.props;
+    const { handleSubmit } = this.props;
+
     return (
-      <form onChange={handleChange} onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
+        <span>Name</span>
         <input
           type="text"
           name="name"
@@ -13,6 +14,7 @@ class Form extends Component {
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
         />
+        <span>Number</span>
         <input
           type="tel"
           name="number"
@@ -20,12 +22,10 @@ class Form extends Component {
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
         />
-        <button type="submit">confirm</button>
+        <button type="submit">Confirm</button>
       </form>
     );
   }
 }
 
-Form.propTypes = {};
-
-export default Form;
+export default SubmitForm;
