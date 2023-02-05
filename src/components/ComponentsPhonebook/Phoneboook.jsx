@@ -1,39 +1,35 @@
-import { Component } from 'react';
+import { useState, useEffect } from 'react';
 import { nanoid } from 'nanoid';
 import SubmitForm from './SubmitForm/SubmitForm';
 import ContactsList from './ContactsList/ContactsList';
 import SearchForm from './SearchForm/SearchForm';
 
-class Phonebook extends Component {
-  state = { contacts: [], name: '', number: '', filter: '' };
+const Phonebook = () => {
+  const [contacts, setContacts] = useState([]);
+  const [name, setName] = useState('');
+  const [number, setNumber] = useState('');
+  const [filter, setFilter] = useState('');
 
-  componentDidMount = () => {
+  useEffect(() => {
     const localContacts = JSON.parse(localStorage.getItem('contacts'));
     if (localContacts === null) {
       return;
     }
-    this.setState(() => {
-      return {
-        contacts: [...localContacts],
-      };
-    });
-  };
+    setContacts(localContacts);
+  }, []);
 
-  handleSubmit = evt => {
+  const handleSubmit = evt => {
     evt.preventDefault();
     const form = evt.target;
     const name = form.name.value;
     const number = form.number.value;
 
-    this.setState(() => {
-      return { name, number };
-    });
+    setName(name);
+    setNumber(number);
 
     if (
-      this.state.contacts !== null &&
-      this.state.contacts.find(
-        el => el.name.includes(name) && el.number.includes(number)
-      )
+      contacts !== null &&
+      contacts.find(el => el.name.includes(name) && el.number.includes(number))
     ) {
       alert('this contact is already in your phonebook!');
       return;
@@ -45,56 +41,45 @@ class Phonebook extends Component {
       id: nanoid(),
     };
 
-    localStorage.setItem(
-      'contacts',
-      JSON.stringify([contact, ...this.state.contacts])
-    );
+    localStorage.setItem('contacts', JSON.stringify([contact, ...contacts]));
 
     const localUsers = JSON.parse(localStorage.getItem('contacts'));
 
-    this.setState(() => {
-      return { contacts: [...localUsers] };
-    });
+    setContacts(localUsers);
 
     form.reset();
   };
 
-  handleRemove = id => {
+  const handleRemove = id => {
     localStorage.setItem(
       'filteredContacts',
-      JSON.stringify(this.state.contacts.filter(el => el.id !== id))
+      JSON.stringify(contacts.filter(el => el.id !== id))
     );
+
     const filteredContacts = JSON.parse(
       localStorage.getItem('filteredContacts')
     );
+
     localStorage.setItem('contacts', JSON.stringify([...filteredContacts]));
-    this.setState(() => {
-      return {
-        contacts: filteredContacts,
-      };
-    });
+    setContacts(filteredContacts);
   };
 
-  onSearch = evt => {
+  const onSearch = evt => {
     const inputValue = evt.target.value;
-    this.setState(() => {
-      return { filter: inputValue };
-    });
+    setFilter(inputValue);
   };
 
-  render() {
-    return (
-      <div>
-        <SubmitForm handleSubmit={this.handleSubmit} />
-        <ContactsList
-          handleRemove={this.handleRemove}
-          list={this.state.contacts}
-          filter={this.state.filter}
-        />
-        <SearchForm value={this.state.filter} handleChange={this.onSearch} />
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      <SubmitForm handleSubmit={handleSubmit} />
+      <ContactsList
+        handleRemove={handleRemove}
+        list={contacts}
+        filter={filter}
+      />
+      <SearchForm value={filter} handleChange={onSearch} />
+    </div>
+  );
+};
 
 export default Phonebook;

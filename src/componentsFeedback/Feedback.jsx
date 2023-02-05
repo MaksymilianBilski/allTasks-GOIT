@@ -1,67 +1,54 @@
-import { Component } from 'react';
+import { useState } from 'react';
 import LeaveFeedback from './LeaveFeedback/LeaveFeedback';
 import Section from './Section/section';
 import StatisticList from './StatisticList/StatisticList';
 
-class Feedback extends Component {
-  state = {
-    good: 0,
-    neutral: 0,
-    bad: 0,
-    total: 0,
-    positiveFeedback: 0,
-  };
+const Feedback = () => {
+  const [stat, setStat] = useState({ good: 0, neural: 0, bad: 0 });
+  const [total, setTotal] = useState();
+  const [positive, setPositive] = useState();
 
-  handleAddFeedback = evt => {
+  const handleAddFeedback = evt => {
     const btnName = evt.target.textContent;
-    this.setState(prevState => {
-      return { [btnName]: prevState[btnName] + 1 };
+    setStat(prevState => {
+      return { ...prevState, [btnName]: prevState[btnName] + 1 };
     });
-    this.countTotalFeedback();
-    this.countPositiveFeedback();
+    countTotalFeedback();
+    countPositiveFeedback();
   };
 
-  countTotalFeedback = () => {
-    const values = Object.values(this.state).splice(0, 3);
+  const countTotalFeedback = () => {
+    const values = Object.values(stat);
     const result = values.reduce((acc, value) => {
       return (value += acc);
     }, 1);
-    this.setState(() => {
-      return { total: result };
-    });
+    setTotal(result);
   };
 
-  countPositiveFeedback = () => {
-    const total = this.state.total + 1;
-    const positive = this.state.good;
-    if (total === 0) {
+  const countPositiveFeedback = () => {
+    const valueTotal = total + 1;
+    const positive = stat.good;
+    if (valueTotal === 0 || isNaN(valueTotal)) {
       return;
     }
-    const result = positive / total;
-    this.setState(() => {
-      return { positiveFeedback: Number(result) };
-    });
+    const result = positive / valueTotal;
+    setPositive(Number(result));
   };
 
-  render() {
-    return (
-      <>
-        <Section
-          children={
-            <LeaveFeedback
-              handleClick={this.handleAddFeedback}
-              state={this.state}
-            />
-          }
-          name="Please leave feedback"
-        />
-        <Section
-          children={<StatisticList state={this.state} />}
-          name="Statistics"
-        />
-      </>
-    );
-  }
-}
+  return (
+    <>
+      <Section
+        children={
+          <LeaveFeedback handleClick={handleAddFeedback} state={stat} />
+        }
+        name="Please leave feedback"
+      />
+      <Section
+        children={<StatisticList state={{ ...stat, total, positive }} />}
+        name="Statistics"
+      />
+    </>
+  );
+};
 
 export default Feedback;
