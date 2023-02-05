@@ -10,7 +10,7 @@ export class App extends Component {
       <div>
         <Feedback />
         <Phonebook />
-        {/* <ImagesFinder /> */}
+        <ImagesFinder />
         <MoviesFinder />
       </div>
     );
