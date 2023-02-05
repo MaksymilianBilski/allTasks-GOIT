@@ -1,0 +1,12 @@
+.imageWrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 350px;
+    height: 250px;
+
+}
+
+.imageWrapper>img {
+    width: 97%;
+    height: 97%;
+}

@@ -1,0 +1,4 @@
+.imagesList {
+    display: flex;
+    flex-wrap: wrap;
+}

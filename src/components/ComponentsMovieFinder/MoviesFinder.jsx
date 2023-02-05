@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { NavLink, Route, Routes } from 'react-router-dom';
-
 import TrendingList from './Home/TrendingList';
 import MovieDetails from './MovieDetails/MovieDetails';
 import Reviews from './Reviews/Reviews';
@@ -27,7 +26,7 @@ const MoviesFinder = () => {
 
   return (
     <div>
-      <NavLink to="searchbar">tutaj klilkaj mordo</NavLink>
+      <NavLink to="searchbar">tu jest searchbar</NavLink>
       <Routes>
         <Route
           path="/react-01-goit"

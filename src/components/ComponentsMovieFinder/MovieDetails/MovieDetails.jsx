@@ -53,6 +53,7 @@ const MovieDetails = () => {
         <span>Additional Information</span>
         <NavLink to={`/details/${movieId}/reviews`}>reviews</NavLink>
         <NavLink to={`/details/${movieId}/credits`}>credits</NavLink>
+        
         <Outlet />
       </div>
     )
