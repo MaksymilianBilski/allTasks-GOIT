@@ -6,8 +6,8 @@ import SearchForm from './SearchForm/SearchForm';
 
 const Phonebook = () => {
   const [contacts, setContacts] = useState([]);
-  const [name, setName] = useState('');
-  const [number, setNumber] = useState('');
+  // const [name, setName] = useState('');
+  // const [number, setNumber] = useState('');
   const [filter, setFilter] = useState('');
 
   useEffect(() => {
@@ -24,8 +24,8 @@ const Phonebook = () => {
     const name = form.name.value;
     const number = form.number.value;
 
-    setName(name);
-    setNumber(number);
+    // setName(name);
+    // setNumber(number);
 
     if (
       contacts !== null &&
