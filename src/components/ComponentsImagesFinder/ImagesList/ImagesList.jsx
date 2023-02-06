@@ -5,20 +5,19 @@ import Button from 'componentsFeedback/Button/Button';
 import css from './ImagesList.module.css';
 import ImageItem from '../ImageItem/ImageItem';
 
-const ImagesList = ({ images, handleClick }) => {
+const ImagesList = ({ query, images, handleClick }) => {
   const [page, setPage] = useState(1);
 
   const addPage = () => {
     setPage(page + 1);
-    return page;
   };
 
   const handleLoadMore = async (query, page) => {
-    addPage();
     try {
       const response = await fetchImages(query, page);
       const newImages = response.hits;
       images.push(...newImages);
+      addPage();
       return response.hits;
     } catch (e) {
       return;
@@ -38,7 +37,9 @@ const ImagesList = ({ images, handleClick }) => {
         ))}
       </ul>
       <Button
-        handleClick={() => handleLoadMore('cat', page)}
+        handleClick={() => {
+          handleLoadMore(query, page);
+        }}
         name="load more"
       />
     </>

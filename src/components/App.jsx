@@ -15,9 +15,8 @@ export class App extends Component {
   render() {
     return (
       <div>
-        <Navigation />
         <Routes>
-          <Route path="/react-01-goit" element={<Phonebook />} />
+          <Route path="/react-01-goit" element={<Navigation />} />
           <Route path="/react-01-goit/phonebook" element={<Phonebook />} />
           <Route path="/react-01-goit/feedback" element={<Feedback />} />
           <Route path="/react-01-goit/images" element={<ImagesFinder />} />
