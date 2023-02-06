@@ -9,16 +9,15 @@ import MovieDetails from './ComponentsMovieFinder/MovieDetails/MovieDetails';
 import Cast from './ComponentsMovieFinder/Cast/Cast';
 import Reviews from './ComponentsMovieFinder/Reviews/Reviews';
 import TrendingList from './ComponentsMovieFinder/Home/TrendingList';
+import Navigation from './Navigation/Navigation';
 
 export class App extends Component {
   render() {
     return (
       <div>
-        <NavLink to="/react-01-goit/movies/moviesList">Movie finder </NavLink>
-        <NavLink to="/react-01-goit/phonebook">Phonebook </NavLink>
-        <NavLink to="/react-01-goit/feedback">Feedback </NavLink>
-        <NavLink to="/react-01-goit/images">Images finder </NavLink>
+        <Navigation />
         <Routes>
+          <Route path="/react-01-goit" element={<Phonebook />} />
           <Route path="/react-01-goit/phonebook" element={<Phonebook />} />
           <Route path="/react-01-goit/feedback" element={<Feedback />} />
           <Route path="/react-01-goit/images" element={<ImagesFinder />} />
