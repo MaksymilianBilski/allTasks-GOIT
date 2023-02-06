@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react';
+import Button from 'componentsFeedback/Button/Button';
 import { fetchDetails } from '../operations/operationsMovies';
-import { NavLink, Outlet, useParams } from 'react-router-dom';
+import { NavLink, Outlet, useLocation, useParams } from 'react-router-dom';
 import css from './MovieDetails.module.css';
 
 const photoURL = 'https://image.tmdb.org/t/p/w500/';
 
 const MovieDetails = () => {
   const [detailsData, setDetailsData] = useState([]);
+  const location = useLocation();
 
   const createMovieDetails = async id => {
     try {
@@ -26,6 +28,9 @@ const MovieDetails = () => {
   return (
     detailsData !== undefined && (
       <div>
+        <NavLink to={location.state.from}>
+          <Button type="button" name="go back" />
+        </NavLink>
         <div className={css.descritpionWrapper}>
           <div className={css.imageWrapper}>
             <img
@@ -53,7 +58,7 @@ const MovieDetails = () => {
         <span>Additional Information</span>
         <NavLink to={`/details/${movieId}/reviews`}>reviews</NavLink>
         <NavLink to={`/details/${movieId}/credits`}>credits</NavLink>
-        
+
         <Outlet />
       </div>
     )

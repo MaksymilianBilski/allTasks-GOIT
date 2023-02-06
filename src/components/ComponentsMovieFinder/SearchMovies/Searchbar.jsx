@@ -1,9 +1,12 @@
 import { useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import Movie from '../Movie/Movie';
 import { fetchByQuery } from '../operations/operationsMovies';
 
 const Searchbar = () => {
   const [queryData, setQueryData] = useState();
+  const [searchParams, setSearchParams] = useSearchParams();
+
   const searchMovies = async query => {
     try {
       const response = await fetchByQuery(query);
@@ -19,6 +22,8 @@ const Searchbar = () => {
     const form = e.target;
     const inputValue = form.search.value;
     searchMovies(inputValue);
+    setSearchParams({ query: inputValue });
+    console.log(searchParams);
     form.reset();
   };
 

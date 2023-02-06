@@ -9,7 +9,6 @@ const TrendingList = () => {
     try {
       const response = await fetchTrending();
       setTrendingMovies(response.results);
-      console.log('test')
       return response.results;
     } catch (e) {
       return;
@@ -21,11 +20,13 @@ const TrendingList = () => {
   }, []);
 
   return (
-    <ul>
-      {trendingMovies.map(el => (
-        <Movie data={el} />
-      ))}
-    </ul>
+    <div>
+      <ul>
+        {trendingMovies.map(el => (
+          <Movie data={el} />
+        ))}
+      </ul>
+    </div>
   );
 };
 

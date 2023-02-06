@@ -19,17 +19,17 @@ export class App extends Component {
         <NavLink to="/react-01-goit/feedback">Feedback </NavLink>
         <NavLink to="/react-01-goit/images">Images finder </NavLink>
         <Routes>
-          <Route path="/react-01-goit/movies" element={<MoviesFinder />}>
-            <Route path="details/:movieId" element={<MovieDetails />}>
-              <Route path="credits" element={<Cast />} />
-              <Route path="reviews" element={<Reviews />} />
-            </Route>
-            <Route path="moviesList" element={<TrendingList />} />
-            <Route path="searchbar" element={<Searchbar />} />
-          </Route>
           <Route path="/react-01-goit/phonebook" element={<Phonebook />} />
           <Route path="/react-01-goit/feedback" element={<Feedback />} />
           <Route path="/react-01-goit/images" element={<ImagesFinder />} />
+          <Route path="/react-01-goit/movies" element={<MoviesFinder />}>
+            <Route path="moviesList" element={<TrendingList />} />
+            <Route path="searchbar" element={<Searchbar />} />
+          </Route>
+          <Route path="details/:movieId" element={<MovieDetails />}>
+            <Route path="credits" element={<Cast />} />
+            <Route path="reviews" element={<Reviews />} />
+          </Route>
           <Route path="*" element={<div>Not Found</div>} />
         </Routes>
       </div>
