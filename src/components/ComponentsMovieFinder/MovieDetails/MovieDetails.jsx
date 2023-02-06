@@ -10,6 +10,7 @@ const MovieDetails = () => {
   const [detailsData, setDetailsData] = useState([]);
   const location = useLocation();
 
+  console.log(location);
   const createMovieDetails = async id => {
     try {
       const response = await fetchDetails(id);
@@ -56,8 +57,12 @@ const MovieDetails = () => {
           </div>
         </div>
         <span>Additional Information</span>
-        <NavLink to={`/details/${movieId}/reviews`}>reviews</NavLink>
-        <NavLink to={`/details/${movieId}/credits`}>credits</NavLink>
+        <NavLink state={{ from: location }} to={`/details/${movieId}/reviews`}>
+          reviews
+        </NavLink>
+        <NavLink state={{ from: location }} to={`/details/${movieId}/credits`}>
+          credits
+        </NavLink>
 
         <Outlet />
       </div>
