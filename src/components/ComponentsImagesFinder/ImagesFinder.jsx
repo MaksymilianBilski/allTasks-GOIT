@@ -11,6 +11,7 @@ const ImagesFinder = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalFormatSrc, setModalFormatSrc] = useState();
 
+
   const openModal = evt => {
     const src = evt.target.src;
     const clickedImage = images.find(el => el.webformatURL === src);

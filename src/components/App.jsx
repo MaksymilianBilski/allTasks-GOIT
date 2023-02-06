@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { NavLink, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Feedback from 'componentsFeedback/Feedback';
 import Phonebook from './ComponentsPhonebook/Phoneboook';
 import ImagesFinder from './ComponentsImagesFinder/ImagesFinder';
