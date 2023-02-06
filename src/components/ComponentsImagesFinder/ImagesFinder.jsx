@@ -10,7 +10,8 @@ const ImagesFinder = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalFormatSrc, setModalFormatSrc] = useState();
-
+  // const [query, setQuery] = useState('');
+  // const [page, setPage] = useState(1);
 
   const openModal = evt => {
     const src = evt.target.src;
@@ -44,6 +45,7 @@ const ImagesFinder = () => {
     evt.preventDefault();
     const form = evt.target;
     const queryValue = form.elements.search.value;
+    // setQuery(queryValue);
     try {
       setIsLoading(true);
       const imagesData = await fetchImages(queryValue);
