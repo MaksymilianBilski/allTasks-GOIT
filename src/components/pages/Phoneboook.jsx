@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { nanoid } from 'nanoid';
-import SubmitForm from './SubmitForm/SubmitForm';
-import ContactsList from './ContactsList/ContactsList';
-import SearchForm from './SearchForm/SearchForm';
+import SubmitForm from '../ComponentsPhonebook/SubmitForm/SubmitForm';
+import ContactsList from '../ComponentsPhonebook/ContactsList/ContactsList';
+import SearchForm from '../ComponentsPhonebook/SearchForm/SearchForm';
 
 const Phonebook = () => {
   const [contacts, setContacts] = useState([]);

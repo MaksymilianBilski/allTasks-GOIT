@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import ImagesList from './ImagesList/ImagesList';
-import Modal from './Modal/Modal';
-import { fetchImages } from './operations/imagesFinderOperation';
-import Searchbar from './Searchbar/Searchbar';
-import { Loader } from './Loader/Loader';
+import ImagesList from '../ComponentsImagesFinder/ImagesList/ImagesList';
+import Modal from '../ComponentsImagesFinder/Modal/Modal';
+import { fetchImages } from '../ComponentsImagesFinder/operations/imagesFinderOperation';
+import Searchbar from '../ComponentsImagesFinder/Searchbar/Searchbar';
+import { Loader } from '../ComponentsImagesFinder/Loader/Loader';
 
 const ImagesFinder = () => {
   const [images, setImages] = useState([]);

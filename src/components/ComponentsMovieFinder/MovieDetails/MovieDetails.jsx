@@ -29,7 +29,13 @@ const MovieDetails = () => {
   return (
     detailsData !== undefined && (
       <div>
-        <NavLink to={location.state.from}>
+        <NavLink
+          to={
+            location.state !== null
+              ? location.state.from
+              : '/react-01-goit/movies/moviesList'
+          }
+        >
           <Button type="button" name="go back" />
         </NavLink>
         <div className={css.descritpionWrapper}>

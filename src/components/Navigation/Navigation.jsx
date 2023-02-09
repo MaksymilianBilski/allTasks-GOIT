@@ -7,6 +7,7 @@ const Navigation = () => {
       <NavLink to="/react-01-goit/phonebook">Phonebook </NavLink>
       <NavLink to="/react-01-goit/feedback">Feedback </NavLink>
       <NavLink to="/react-01-goit/images">Images finder </NavLink>
+      <NavLink to="/react-01-goit/tasksManager">Task manager </NavLink>
     </div>
   );
 };
