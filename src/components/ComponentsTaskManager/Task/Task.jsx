@@ -16,11 +16,10 @@ const Task = ({ taskId, text, completed }) => {
 
   return (
     <li key={taskId} className={css.listItem}>
-      {text}{' '}
-      <span>
-        Completed:{' '}
-        <input onChange={handleToggle} type="checkbox" checked={completed} />
-      </span>
+      <span>{text}</span>
+      <span>Completed: </span>
+
+      <input onChange={handleToggle} type="checkbox" checked={completed} />
       <Button handleClick={handleClose} children="X" />
     </li>
   );
