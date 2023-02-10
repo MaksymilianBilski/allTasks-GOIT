@@ -1,18 +1,19 @@
 export const Form = ({
   value,
   handleChange,
-  handleSubmit,
+  handleInputSubmit,
+  handleFormSubmit,
   name,
   type,
   placeholder,
   children,
 }) => {
   return (
-    <form>
+    <form onSubmit={handleFormSubmit}>
       <input
         type={type}
         name={name}
-        onSubmit={handleSubmit}
+        onSubmit={handleInputSubmit}
         onChange={handleChange}
         placeholder={placeholder}
         value={value}

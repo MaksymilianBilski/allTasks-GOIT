@@ -1,0 +1,7 @@
+.listItem {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30px;
+    border-bottom: 2px solid green;
+    padding: 10px 0;
+}
