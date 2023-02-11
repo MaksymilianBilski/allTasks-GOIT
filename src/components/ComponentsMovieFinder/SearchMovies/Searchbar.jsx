@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import Movie from '../Movie/Movie';
 import { fetchByQuery } from '../operations/operationsMovies';
+import { Form } from 'components/common/Form/Form';
+import css from './Searchbar.module.css';
 
 const Searchbar = () => {
   const [queryData, setQueryData] = useState();
@@ -23,17 +25,22 @@ const Searchbar = () => {
     const inputValue = form.search.value;
     searchMovies(inputValue);
     setSearchParams({ query: inputValue });
-    console.log(searchParams);
     form.reset();
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        hehe
-        <input type="text" name="search"></input>
-      </form>
-      <ul>{queryData && queryData.map(el => <Movie data={el} />)}</ul>
+    <div className={css.searchWrapper}>
+      <Form
+        handleFormSubmit={handleSubmit}
+        type="text"
+        name="search"
+        placeholder="search for movies"
+      />
+      <div className={css.listWrapper}>
+        <ul className={css.searchList}>
+          {queryData && queryData.map(el => <Movie data={el} />)}
+        </ul>
+      </div>
     </div>
   );
 };

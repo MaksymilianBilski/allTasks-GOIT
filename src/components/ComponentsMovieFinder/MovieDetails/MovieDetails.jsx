@@ -29,6 +29,13 @@ const MovieDetails = () => {
   return (
     detailsData !== undefined && (
       <div>
+        <div
+          className={css.backImage}
+          style={{
+            backgroundImage:
+              'url(' + photoURL + detailsData.backdrop_path + ')',
+          }}
+        ></div>
         <NavLink
           to={
             location.state !== null
@@ -38,7 +45,7 @@ const MovieDetails = () => {
         >
           <Button type="button" name="go back" />
         </NavLink>
-        <div className={css.descritpionWrapper}>
+        <div className={css.descriptionWrapper}>
           <div className={css.imageWrapper}>
             <img
               alt={detailsData.tags}

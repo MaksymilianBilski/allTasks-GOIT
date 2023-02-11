@@ -1,0 +1,21 @@
+.descriptionWrapper {
+    display: flex;
+}
+
+/* .imageWrapper {
+    display: flex;
+} */
+
+.imageWrapper>img {
+    width: 320px;
+    height: 300px;
+}
+
+.description {
+    background-image: inherit;
+}
+
+.backImage {
+    width: 100%;
+    height: 100%;
+}

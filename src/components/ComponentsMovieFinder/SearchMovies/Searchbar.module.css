@@ -1,0 +1,28 @@
+.searchList {
+    list-style: numbers;
+    display: grid;
+    grid-gap: 5px;
+}
+
+.listWrapper {
+    display: flex;
+    margin: 0 auto;
+    max-width: 600px;
+    min-height: 500px;
+    color: rgb(182, 88, 11);
+    font-weight: 700;
+    background-color: yellowgreen;
+    box-shadow: 20px 12px 60px 40px rgb(114, 148, 46);
+}
+
+.searchWrapper>form>input {
+    display: flex;
+    width: 300px;
+    margin: 5px auto;
+}
+
+.searchWrapper>form>input:hover {
+    background-color: rgb(121, 6, 50);
+    border: 2px solid rgb(53, 1, 21);
+    cursor: pointer;
+}
