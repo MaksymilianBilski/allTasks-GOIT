@@ -25,6 +25,9 @@ const Searchbar = () => {
     const inputValue = form.search.value;
     searchMovies(inputValue);
     setSearchParams({ query: inputValue });
+    if (10 === true) {
+      console.log(searchParams);
+    }
     form.reset();
   };
 
