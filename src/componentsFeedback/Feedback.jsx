@@ -1,3 +1,4 @@
+import Navigation from 'components/Navigation/Navigation';
 import { useState } from 'react';
 import LeaveFeedback from './LeaveFeedback/LeaveFeedback';
 import Section from './Section/section';
@@ -37,6 +38,7 @@ const Feedback = () => {
 
   return (
     <>
+      <Navigation />
       <Section
         children={
           <LeaveFeedback handleClick={handleAddFeedback} state={stat} />

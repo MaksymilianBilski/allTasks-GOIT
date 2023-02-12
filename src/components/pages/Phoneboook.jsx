@@ -12,6 +12,7 @@ import {
   getContacts,
   getFilter,
 } from 'components/ComponentsPhonebook/redux/phonebookSelectors';
+import Navigation from 'components/Navigation/Navigation';
 
 const Phonebook = () => {
   const dispatch = useDispatch();
@@ -52,6 +53,7 @@ const Phonebook = () => {
 
   return (
     <div>
+      <Navigation />
       <SubmitForm handleSubmit={handleSubmit} />
       <ContactsList
         handleRemove={handleRemove}
