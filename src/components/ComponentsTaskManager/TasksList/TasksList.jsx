@@ -23,13 +23,18 @@ const TasksList = () => {
     }
   };
 
-  const visibleTasks = getVisibleTasks(tasks, filter);
+  const visibleTasks = () => {
+    if (tasks === undefined) {
+      return [];
+    }
+    return getVisibleTasks(tasks, filter);
+  };
 
   return (
     <div>
       <h3>Task list</h3>
       <ul>
-        {visibleTasks.map(el => (
+        {visibleTasks().map(el => (
           <Task text={el.text} task={el} isCompleted={el.isCompleted} />
         ))}
       </ul>
