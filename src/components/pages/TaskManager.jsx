@@ -9,6 +9,7 @@ import {
   getIsLoading,
 } from 'components/ComponentsTaskManager/redux/tasksSelectors';
 import { Loader } from 'components/ComponentsImagesFinder/Loader/Loader';
+import Navigation from 'components/Navigation/Navigation';
 
 export const TaskManager = () => {
   const isLoading = useSelector(getIsLoading);
@@ -21,8 +22,10 @@ export const TaskManager = () => {
 
   return (
     <>
+      <Navigation />
       {error ? (
         <div>
+          <Navigation />
           <span>something went wrong</span>
         </div>
       ) : (
