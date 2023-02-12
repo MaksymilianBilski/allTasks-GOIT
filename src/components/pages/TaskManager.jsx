@@ -16,7 +16,6 @@ export const TaskManager = () => {
 
   const dispatch = useDispatch();
   useEffect(() => {
-    console.log('cos');
     dispatch(fetchTasks());
   }, [dispatch]);
 

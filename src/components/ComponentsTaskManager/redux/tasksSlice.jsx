@@ -27,6 +27,7 @@ const tasksSlice = createSlice({
       state.isLoading = true;
     },
     [addTask.fulfilled](state, action) {
+      console.log(state);
       state.isLoading = false;
       state.items.push(action.payload);
       state.error = null;

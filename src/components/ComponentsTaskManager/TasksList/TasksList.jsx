@@ -25,7 +25,7 @@ const TasksList = () => {
 
   const visibleTasks = () => {
     if (tasks === undefined) {
-      return [];
+      return;
     }
     return getVisibleTasks(tasks, filter);
   };

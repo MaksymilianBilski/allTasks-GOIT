@@ -20,8 +20,8 @@ const StatBar = () => {
     <section>
       <h3>Tasks</h3>
       <ul>
-        <li>completed: {completedTasks}</li>
-        <li>incompleted: {incompletedTasks}</li>
+        <li>completed: {completedTasks()}</li>
+        <li>incompleted: {incompletedTasks()}</li>
       </ul>
     </section>
   );
