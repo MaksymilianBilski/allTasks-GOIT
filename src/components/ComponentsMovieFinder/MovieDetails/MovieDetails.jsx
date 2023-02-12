@@ -10,7 +10,6 @@ const MovieDetails = () => {
   const [detailsData, setDetailsData] = useState([]);
   const location = useLocation();
 
-  console.log(location);
   const createMovieDetails = async id => {
     try {
       const response = await fetchDetails(id);

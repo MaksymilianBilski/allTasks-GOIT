@@ -8,6 +8,9 @@ const TasksList = () => {
   console.log(tasks);
 
   const getVisibleTasks = (tasks, filter) => {
+    if (tasks === undefined || filter === undefined) {
+      return;
+    }
     switch (filter) {
       case 'completed':
         return tasks.filter(el => el.isCompleted === true);
