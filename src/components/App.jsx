@@ -17,12 +17,12 @@ export class App extends Component {
     return (
       <div>
         <Routes>
-          <Route path="/react-01-goit" element={<Navigation />} />
-          <Route path="/react-01-goit/phonebook" element={<Phonebook />} />
-          <Route path="/react-01-goit/feedback" element={<Feedback />} />
-          <Route path="/react-01-goit/images" element={<ImagesFinder />} />
-          <Route path="/react-01-goit/tasksManager" element={<TaskManager />} />
-          <Route path="/react-01-goit/movies" element={<MoviesFinder />}>
+          <Route path="/allTasks-GOIT" element={<Navigation />} />
+          <Route path="/allTasks-GOIT/phonebook" element={<Phonebook />} />
+          <Route path="/allTasks-GOIT/feedback" element={<Feedback />} />
+          <Route path="/allTasks-GOIT/images" element={<ImagesFinder />} />
+          <Route path="/allTasks-GOIT/tasksManager" element={<TaskManager />} />
+          <Route path="/allTasks-GOIT/movies" element={<MoviesFinder />}>
             <Route path="moviesList" element={<TrendingList />} />
             <Route path="searchbar" element={<Searchbar />} />
           </Route>

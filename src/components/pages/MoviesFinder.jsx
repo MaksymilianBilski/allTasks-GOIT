@@ -10,7 +10,7 @@ const MoviesFinder = () => {
   return (
     <div>
       <Navigation />
-      <NavLink to="/react-01-goit/movies/moviesList">HOMEPAGE</NavLink>
+      <NavLink to="/allTasks-GOIT/movies/moviesList">HOMEPAGE</NavLink>
       <NavLink to="searchbar">
         <button>Search Movies</button>
       </NavLink>

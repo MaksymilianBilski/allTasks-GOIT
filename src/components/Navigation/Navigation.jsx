@@ -4,19 +4,19 @@ import css from './Navigation.module.css';
 const Navigation = () => {
   return (
     <div className={css.navigationWrapper}>
-      <NavLink className={css.navLink} to="/react-01-goit/movies/moviesList">
+      <NavLink className={css.navLink} to="/allTasks-GOIT/movies/moviesList">
         Movie finder
       </NavLink>
-      <NavLink className={css.navLink} to="/react-01-goit/phonebook">
+      <NavLink className={css.navLink} to="/allTasks-GOIT/phonebook">
         Phonebook
       </NavLink>
-      <NavLink className={css.navLink} to="/react-01-goit/feedback">
+      <NavLink className={css.navLink} to="/allTasks-GOIT/feedback">
         Feedback
       </NavLink>
-      <NavLink className={css.navLink} to="/react-01-goit/images">
+      <NavLink className={css.navLink} to="/allTasks-GOIT/images">
         Images finder
       </NavLink>
-      <NavLink className={css.navLink} to="/react-01-goit/tasksManager">
+      <NavLink className={css.navLink} to="/allTasks-GOIT/tasksManager">
         Task manager
       </NavLink>
     </div>
