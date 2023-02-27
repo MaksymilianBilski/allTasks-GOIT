@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import {
   getError,
   getIsLoading,
+  getTasks,
 } from 'components/ComponentsTaskManager/redux/tasksSelectors';
 import { Loader } from 'components/ComponentsImagesFinder/Loader/Loader';
 import Navigation from 'components/Navigation/Navigation';
@@ -14,6 +15,8 @@ import Navigation from 'components/Navigation/Navigation';
 export const TaskManager = () => {
   const isLoading = useSelector(getIsLoading);
   const error = useSelector(getError);
+  const tasks = useSelector(getTasks);
+  console.log(tasks);
 
   const dispatch = useDispatch();
   useEffect(() => {
