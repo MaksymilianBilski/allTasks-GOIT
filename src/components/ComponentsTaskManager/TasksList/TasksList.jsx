@@ -5,7 +5,6 @@ import { getFilters, getTasks } from '../redux/tasksSelectors';
 const TasksList = () => {
   const tasks = useSelector(getTasks);
   const filter = useSelector(getFilters);
-  console.log(tasks);
 
   const getVisibleTasks = (tasks, filter) => {
     if (tasks === undefined || filter === undefined) {
@@ -24,6 +23,7 @@ const TasksList = () => {
   };
 
   const visibleTasks = () => {
+    console.log(tasks);
     if (tasks === undefined) {
       return;
     }
