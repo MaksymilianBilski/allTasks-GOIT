@@ -17,6 +17,7 @@ export const TaskManager = () => {
   const error = useSelector(getError);
   const tasks = useSelector(getTasks);
   console.log(tasks);
+  console.log(isLoading);
 
   const dispatch = useDispatch();
   useEffect(() => {
