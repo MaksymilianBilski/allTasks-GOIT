@@ -14,8 +14,7 @@ import Navigation from 'components/Navigation/Navigation';
 export const TaskManager = () => {
   const isLoading = useSelector(getIsLoading);
   const error = useSelector(getError);
-  console.log('test z task manager');
-  console.log(isLoading);
+
 
   const dispatch = useDispatch();
   useEffect(() => {

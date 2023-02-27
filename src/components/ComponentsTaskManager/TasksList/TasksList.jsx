@@ -23,7 +23,6 @@ const TasksList = () => {
   };
 
   const visibleTasks = () => {
-    console.log(tasks);
     if (tasks === undefined) {
       return;
     }
