@@ -5,6 +5,8 @@ import { NavLink, Outlet, useLocation, useParams } from 'react-router-dom';
 import css from './MovieDetails.module.css';
 
 const photoURL = 'https://image.tmdb.org/t/p/w500/';
+const substPhotoURL =
+  'https://www.csaff.org/wp-content/uploads/csaff-no-poster.jpg';
 
 const MovieDetails = () => {
   const [detailsData, setDetailsData] = useState([]);
@@ -31,26 +33,33 @@ const MovieDetails = () => {
         <div
           className={css.backImage}
           style={{
-            backgroundImage:
-              'url(' + photoURL + detailsData.backdrop_path + ')',
+            background: `url('${photoURL + detailsData.backdrop_path}'),
+            url('${substPhotoURL}')`,
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
           }}
         ></div>
         <NavLink
           to={
             location.state !== null
               ? location.state.from
-              : '/react-01-goit/movies/moviesList'
+              : '/allTasks-GOIT/movies/moviesList'
           }
         >
           <Button type="button" name="go back" />
         </NavLink>
         <div className={css.descriptionWrapper}>
-          <div className={css.imageWrapper}>
+          <figure className={css.imageWrapper}>
             <img
               alt={detailsData.tags}
-              src={photoURL + detailsData.backdrop_path}
+              src={
+                detailsData.backdrop_path !== null
+                  ? photoURL + detailsData.backdrop_path
+                  : substPhotoURL
+              }
             />
-          </div>
+          </figure>
           <div className={css.description}>
             <h2>
               {detailsData.original_title
