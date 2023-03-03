@@ -4,13 +4,11 @@ import MovieDetails from '../ComponentsMovieFinder/MovieDetails/MovieDetails';
 import Reviews from '../ComponentsMovieFinder/Reviews/Reviews';
 import Cast from '../ComponentsMovieFinder/Cast/Cast';
 import Searchbar from '../ComponentsMovieFinder/SearchMovies/Searchbar';
-import Navigation from 'components/Navigation/Navigation';
 
 const MoviesFinder = () => {
   return (
     <div>
-      <Navigation />
-      <NavLink to="/allTasks-GOIT/movies/moviesList">HOMEPAGE</NavLink>
+      <NavLink to="/allTasks-GOIT">HOMEPAGE</NavLink>
       <NavLink to="searchbar">
         <button>Search Movies</button>
       </NavLink>

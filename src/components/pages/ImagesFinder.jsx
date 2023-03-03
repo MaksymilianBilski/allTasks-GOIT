@@ -4,7 +4,7 @@ import Modal from '../ComponentsImagesFinder/Modal/Modal';
 import { fetchImages } from '../ComponentsImagesFinder/operations/imagesFinderOperation';
 import Searchbar from '../ComponentsImagesFinder/Searchbar/Searchbar';
 import { Loader } from '../ComponentsImagesFinder/Loader/Loader';
-import Navigation from 'components/Navigation/Navigation';
+import { NavLink } from 'react-router-dom';
 
 const ImagesFinder = () => {
   const [images, setImages] = useState([]);
@@ -59,7 +59,7 @@ const ImagesFinder = () => {
 
   return (
     <div>
-      <Navigation />
+      <NavLink to="/allTasks-GOIT">HOMEPAGE</NavLink>
       {isLoading === true && <Loader />}
       {isModalOpen ? (
         <Modal handleClose={onModalClose} src={modalFormatSrc} />

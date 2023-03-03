@@ -10,11 +10,11 @@ import {
 } from 'components/ComponentsTaskManager/redux/tasksSelectors';
 import { Loader } from 'components/ComponentsImagesFinder/Loader/Loader';
 import Navigation from 'components/Navigation/Navigation';
+import { NavLink } from 'react-router-dom';
 
 export const TaskManager = () => {
   const isLoading = useSelector(getIsLoading);
   const error = useSelector(getError);
-
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -23,7 +23,7 @@ export const TaskManager = () => {
 
   return (
     <>
-      <Navigation />
+      <NavLink to="/allTasks-GOIT">HOMEPAGE</NavLink>
       {error ? (
         <div>
           <Navigation />

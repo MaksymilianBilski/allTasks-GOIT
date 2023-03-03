@@ -1,18 +1,27 @@
 .navigationWrapper {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
-
 .navLink {
+    width: 450px;
+    height: 400px;
     color: rgb(28, 100, 67);
-    font-size: 20px;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 44px;
     font-weight: 600;
     margin: 20px;
     text-decoration: none;
+    border: 3px solid rgb(10, 146, 82)
 }
 
 .navLink:hover {
     color: rgb(10, 146, 82);
-    text-shadow: 5px 5px 5px rgb(14, 56, 36);
+    text-shadow: 5px 0px 5px rgb(14, 56, 36);
+    transition-duration: 250ms;
+    background-color: rgb(17, 131, 231);
 }

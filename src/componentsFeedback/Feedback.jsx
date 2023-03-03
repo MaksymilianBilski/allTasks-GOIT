@@ -1,4 +1,4 @@
-import Navigation from 'components/Navigation/Navigation';
+import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import LeaveFeedback from './LeaveFeedback/LeaveFeedback';
 import Section from './Section/section';
@@ -38,7 +38,7 @@ const Feedback = () => {
 
   return (
     <>
-      <Navigation />
+      <NavLink to="/allTasks-GOIT">HOMEPAGE</NavLink>
       <Section
         children={
           <LeaveFeedback handleClick={handleAddFeedback} state={stat} />
