@@ -1,4 +1,5 @@
 .imagesList {
     display: flex;
     flex-wrap: wrap;
+    grid-gap: 7px;
 }

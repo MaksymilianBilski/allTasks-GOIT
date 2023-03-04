@@ -1,5 +1,6 @@
 import { nanoid } from 'nanoid';
 import { useState } from 'react';
+import { Notify } from 'notiflix';
 import { fetchImages } from '../operations/imagesFinderOperation';
 import Button from 'componentsFeedback/Button/Button';
 import css from './ImagesList.module.css';
@@ -18,9 +19,14 @@ const ImagesList = ({ query, images, handleClick }) => {
       const newImages = response.hits;
       images.push(...newImages);
       addPage();
+      if (response.hits.length === 0) {
+        Notify.warning(
+          'Sorry! There is no more images to load for this query!'
+        );
+      }
       return response.hits;
     } catch (e) {
-      return;
+      return e;
     }
   };
 

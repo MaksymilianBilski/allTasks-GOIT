@@ -58,7 +58,7 @@ const ImagesFinder = () => {
   };
 
   return (
-    <div>
+    <div style={{ backgroundColor: 'blue', height: '100em' }}>
       <NavLink to="/allTasks-GOIT">HOMEPAGE</NavLink>
       {isLoading === true && <Loader />}
       {isModalOpen ? (

@@ -3,7 +3,7 @@ import css from './ImageItem.module.css';
 const ImageItem = ({ src, tags, handleClick }) => {
   return (
     <li className={css.imageWrapper}>
-      <img onClick={handleClick} alt={tags} src={src} />
+      <img className={css.image} onClick={handleClick} alt={tags} src={src} />
     </li>
   );
 };

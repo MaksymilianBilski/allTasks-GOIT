@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { Quiz } from './pages/Quiz';
 import Feedback from 'componentsFeedback/Feedback';
 import Phonebook from './pages/Phoneboook';
 import ImagesFinder from './pages/ImagesFinder';
@@ -18,6 +19,7 @@ export class App extends Component {
       <div>
         <Routes>
           <Route path="/allTasks-GOIT" element={<Navigation />} />
+          <Route path="allTasks-GOIT/quiz" element={<Quiz />} />
           <Route path="/allTasks-GOIT/phonebook" element={<Phonebook />} />
           <Route path="/allTasks-GOIT/feedback" element={<Feedback />} />
           <Route path="/allTasks-GOIT/images" element={<ImagesFinder />} />
