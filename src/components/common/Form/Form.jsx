@@ -7,10 +7,13 @@ export const Form = ({
   type,
   placeholder,
   children,
+  classNameInput,
+  classNameForm,
 }) => {
   return (
-    <form onSubmit={handleFormSubmit}>
+    <form className={classNameForm} onSubmit={handleFormSubmit}>
       <input
+        className={classNameInput}
         type={type}
         name={name}
         onSubmit={handleInputSubmit}

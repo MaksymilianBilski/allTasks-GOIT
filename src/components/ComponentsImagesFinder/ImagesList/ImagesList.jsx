@@ -2,7 +2,7 @@ import { nanoid } from 'nanoid';
 import { useState } from 'react';
 import { Notify } from 'notiflix';
 import { fetchImages } from '../operations/imagesFinderOperation';
-import Button from 'componentsFeedback/Button/Button';
+import Button from 'components/common/Button/Button';
 import css from './ImagesList.module.css';
 import ImageItem from '../ImageItem/ImageItem';
 
@@ -46,7 +46,8 @@ const ImagesList = ({ query, images, handleClick }) => {
         handleClick={() => {
           handleLoadMore(query, page);
         }}
-        name="load more"
+        children="Gimme more images!"
+        classNameBtn={css.btn}
       />
     </>
   );

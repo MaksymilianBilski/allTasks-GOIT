@@ -1,7 +1,28 @@
 .imagesList {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     grid-gap: 7px;
-    margin: 0 auto;
-    width: 100%;
+    max-width: 100%;
+    padding: 0;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    margin: auto;
+    cursor: pointer;
+    font-size: 22px;
+    color: green;
+    border: 2px solid rgb(51, 3, 114);
+    background-color: rgb(157, 214, 195);
+    transition: all 250ms ease-out
+}
+
+.btn:hover {
+    background-color: rgb(20, 104, 160);
+    font-weight: 600;
+    color: blueviolet;
+    border: 2px solid rgb(21, 1, 46);
 }
