@@ -2,26 +2,67 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    background-color: rgb(115, 186, 226);
+    box-shadow: 0px 0px 75px 10em rgb(115, 186, 226);
+    width: 100%;
 }
 
 .navLink {
-    width: 450px;
-    height: 400px;
+    width: 250px;
+    height: 250px;
     color: rgb(28, 100, 67);
     background-color: aqua;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 44px;
+    font-size: 34px;
     font-weight: 600;
-    margin: 20px;
+    margin: 5px;
     text-decoration: none;
-    border: 3px solid rgb(10, 146, 82)
+    border: 3px solid rgb(51, 3, 90);
+    border-radius: 20%;
+    transition-duration: 250ms;
+}
+
+.navLink:nth-of-type(-n + 5) {
+    margin-bottom: 15px;
+}
+
+@media screen and (min-width: 767px) {
+    .navLink {
+        width: 300px;
+        height: 300px;
+        font-size: 44px;
+        font-weight: 600;
+        margin: 10px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .navLink {
+        width: 325px;
+        height: 325px;
+        font-size: 48px;
+        font-weight: 600;
+        margin: 15px;
+        border-width: 3.5px;
+    }
+}
+
+@media screen and (min-width: 1380px) {
+    .navLink {
+        width: 400px;
+        height: 400px;
+        font-size: 54px;
+        font-weight: 600;
+        margin: 20px;
+        border-width: 5px;
+    }
 }
 
 .navLink:hover {
     color: rgb(10, 146, 82);
     text-shadow: 5px 0px 5px rgb(14, 56, 36);
-    transition-duration: 250ms;
+    box-shadow: 0px 20px 46px 17px rgb(2, 50, 138);
     background-color: rgb(17, 131, 231);
 }
