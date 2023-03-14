@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/allTasks-GOIT/static/css/main.7301e3ea.css",
+    "main.css": "/allTasks-GOIT/static/css/main.22757ca3.css",
     "main.js": "/allTasks-GOIT/static/js/main.a20bb810.js",
     "index.html": "/allTasks-GOIT/index.html",
-    "main.7301e3ea.css.map": "/allTasks-GOIT/static/css/main.7301e3ea.css.map",
+    "main.22757ca3.css.map": "/allTasks-GOIT/static/css/main.22757ca3.css.map",
     "main.a20bb810.js.map": "/allTasks-GOIT/static/js/main.a20bb810.js.map"
   },
   "entrypoints": [
-    "static/css/main.7301e3ea.css",
+    "static/css/main.22757ca3.css",
     "static/js/main.a20bb810.js"
   ]
 }
