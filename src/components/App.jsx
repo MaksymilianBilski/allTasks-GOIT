@@ -16,25 +16,23 @@ import { TaskManager } from './pages/TaskManager';
 export class App extends Component {
   render() {
     return (
-      <div>
-        <Routes>
-          <Route path="/allTasks-GOIT" element={<Navigation />} />
-          <Route path="allTasks-GOIT/quiz" element={<Quiz />} />
-          <Route path="/allTasks-GOIT/phonebook" element={<Phonebook />} />
-          <Route path="/allTasks-GOIT/feedback" element={<Feedback />} />
-          <Route path="/allTasks-GOIT/images" element={<ImagesFinder />} />
-          <Route path="/allTasks-GOIT/tasksManager" element={<TaskManager />} />
-          <Route path="/allTasks-GOIT/movies" element={<MoviesFinder />}>
-            <Route path="moviesList" element={<TrendingList />} />
-            <Route path="searchbar" element={<Searchbar />} />
-          </Route>
-          <Route path="details/:movieId" element={<MovieDetails />}>
-            <Route path="credits" element={<Cast />} />
-            <Route path="reviews" element={<Reviews />} />
-          </Route>
-          <Route path="*" element={<div>Not Found</div>} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/allTasks-GOIT" element={<Navigation />} />
+        <Route path="allTasks-GOIT/quiz" element={<Quiz />} />
+        <Route path="/allTasks-GOIT/phonebook" element={<Phonebook />} />
+        <Route path="/allTasks-GOIT/feedback" element={<Feedback />} />
+        <Route path="/allTasks-GOIT/images" element={<ImagesFinder />} />
+        <Route path="/allTasks-GOIT/tasksManager" element={<TaskManager />} />
+        <Route path="/allTasks-GOIT/movies" element={<MoviesFinder />}>
+          <Route path="moviesList" element={<TrendingList />} />
+          <Route path="searchbar" element={<Searchbar />} />
+        </Route>
+        <Route path="details/:movieId" element={<MovieDetails />}>
+          <Route path="credits" element={<Cast />} />
+          <Route path="reviews" element={<Reviews />} />
+        </Route>
+        <Route path="*" element={<div>Not Found</div>} />
+      </Routes>
     );
   }
 }
