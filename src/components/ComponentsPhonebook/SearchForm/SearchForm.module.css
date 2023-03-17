@@ -1,0 +1,23 @@
+.form {
+    display: flex;
+    align-items: center;
+    max-width: 70%;
+    height: 50px;
+    background-color: yellow;
+    margin: 0 auto;
+    transition: all 250ms ease-in-out
+}
+
+.form:hover {
+    background-color: rgb(172, 214, 18);
+    box-shadow: inset 0px 0px 20px 10px rgb(3, 12, 3)
+}
+
+.input {
+    margin: 0 auto;
+}
+
+.input:hover {
+    background-color: antiquewhite;
+    cursor: pointer
+}

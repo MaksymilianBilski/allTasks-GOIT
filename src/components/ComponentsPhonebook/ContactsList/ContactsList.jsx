@@ -1,12 +1,13 @@
 import Contact from '../Contact/Contact';
 import { nanoid } from 'nanoid';
+import css from './ContactsList.module.css';
 
 const ContactsList = ({ list, filter, handleRemove }) => {
   const filteredList = list.filter(el =>
     el.name.toLowerCase().includes(filter.toLowerCase())
   );
   return (
-    <ul>
+    <ul className={css.contactsList}>
       {filteredList.map(el => (
         <Contact
           handleRemove={handleRemove}

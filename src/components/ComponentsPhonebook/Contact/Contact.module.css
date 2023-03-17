@@ -1,0 +1,36 @@
+.contact {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.contact p {
+    color: rgb(67, 20, 194)
+}
+
+.contact span {
+    font-weight: 700;
+    font-size: 14px;
+    color: rgb(53, 4, 187);
+}
+
+.contact span:hover {
+    cursor: pointer;
+    color: rgb(105, 68, 209);
+}
+
+.btn {
+    color: rgb(70, 51, 51);
+    background-color: red;
+    width: 70px;
+    height: 26.5px;
+    align-self: center;
+    margin: 0 auto;
+    font-size: 15px;
+}
+
+.btn:hover {
+    cursor: pointer
+}

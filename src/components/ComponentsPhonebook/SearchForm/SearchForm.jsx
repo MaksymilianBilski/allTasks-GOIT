@@ -1,13 +1,16 @@
+import { Form } from 'components/common/Form/Form';
+import css from './SearchForm.module.css';
+
 const SearchForm = ({ handleChange, value }) => {
   return (
-    <form>
-      <input
-        onChange={handleChange}
-        value={value}
-        type="text"
-        placeholder="search"
-      ></input>
-    </form>
+    <Form
+      classNameInput={css.input}
+      classNameForm={css.form}
+      handleChange={handleChange}
+      value={value}
+      type="text"
+      placeholder="search"
+    />
   );
 };
 
