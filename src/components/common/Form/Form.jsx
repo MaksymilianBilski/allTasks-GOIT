@@ -9,10 +9,13 @@ export const Form = ({
   children,
   classNameInput,
   classNameForm,
+  inputPattern,
+  inputRequired,
 }) => {
   return (
     <form className={classNameForm} onSubmit={handleFormSubmit}>
       <input
+        pattern={inputPattern}
         className={classNameInput}
         type={type}
         name={name}
@@ -20,6 +23,7 @@ export const Form = ({
         onChange={handleChange}
         placeholder={placeholder}
         value={value}
+        required={inputRequired}
       />
       {children}
     </form>

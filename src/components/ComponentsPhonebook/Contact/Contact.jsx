@@ -4,12 +4,14 @@ import css from './Contact.module.css';
 const Contact = ({ name, number, id, handleRemove }) => {
   return (
     <li className={css.contact}>
-      <p>
-        <span>Name:</span> {name}
-      </p>
-      <p>
-        <span>Number:</span> {number}
-      </p>
+      <div className={css.credentials}>
+        <p>
+          <span>Name:</span> {name}
+        </p>
+        <p>
+          <span>Number:</span> {number}
+        </p>
+      </div>
       <div>
         <Button
           handleClick={() => {
