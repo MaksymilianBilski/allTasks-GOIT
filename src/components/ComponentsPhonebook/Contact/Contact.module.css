@@ -1,20 +1,36 @@
 .contact {
     display: flex;
+    justify-content: center;
     align-items: center;
     list-style: none;
     font-weight: 500;
     font-size: 12px;
     width: 200px;
+
 }
 
 .contact p {
-    color: rgb(67, 20, 194)
+    color: rgb(67, 20, 194);
+    margin-right: 7px;
+    border-right: 2px solid green;
+}
+
+.credentials {
+    display: flex;
+}
+
+.credentials p {
+    display: flex;
+    flex-direction: column;
 }
 
 .contact span {
     font-weight: 700;
     font-size: 14px;
-    color: rgb(53, 4, 187);
+    max-width: 75px;
+    inline-size: 75px;
+    overflow-wrap: break-word;
+    color: green;
 }
 
 .contact span:hover {
@@ -22,21 +38,21 @@
     color: rgb(105, 68, 209);
 }
 
-.credentials {
-    display: flex;
+.btn {
+    color: rgb(3, 61, 18);
+    background-color: rgb(226, 211, 6);
+    border-radius: 10%;
+    width: 50px;
+    height: auto;
+    padding: 0;
+    margin: 0 auto;
+    font-size: 12px;
+    transition: 250ms all ease
 }
 
-.btn {
-    color: rgb(70, 51, 51);
-    background-color: red;
-    width: 70px;
-    height: 26.5px;
-    align-self: center;
-    margin: 0 auto;
-    font-size: 15px;
-}
 
 .btn:hover {
+    background-color: blanchedalmond;
     cursor: pointer;
     margin: 0 auto;
 }

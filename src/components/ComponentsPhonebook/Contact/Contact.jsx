@@ -2,14 +2,16 @@ import Button from 'components/common/Button/Button';
 import css from './Contact.module.css';
 
 const Contact = ({ name, number, id, handleRemove }) => {
+  document.body.style.backgroundColor = 'rgb(158, 228, 176)';
+
   return (
     <li className={css.contact}>
       <div className={css.credentials}>
         <p>
-          <span>Name:</span> {name}
+          Name:<span>{name}</span>
         </p>
         <p>
-          <span>Number:</span> {number}
+          Number:<span>{number}</span>
         </p>
       </div>
       <div>

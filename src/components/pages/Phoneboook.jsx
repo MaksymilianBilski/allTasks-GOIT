@@ -52,7 +52,7 @@ const Phonebook = () => {
   };
 
   return (
-    <div style={{ backgroundColor: 'lightyellow', height: '100em' }}>
+    <div>
       <NavLink to="/allTasks-GOIT">HOMEPAGE</NavLink>
       <SubmitForm handleSubmit={handleSubmit} />
       <ContactsList
