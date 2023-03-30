@@ -3,6 +3,8 @@
     max-width: 500px;
     height: 100px;
     margin: 0 auto;
+    padding-bottom: 10px;
+    border-radius: 10%;
     background-color: rgb(96, 240, 12);
 }
 
