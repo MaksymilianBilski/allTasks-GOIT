@@ -7,17 +7,20 @@ const ContactsList = ({ list, filter, handleRemove }) => {
     el.name.toLowerCase().includes(filter.toLowerCase())
   );
   return (
-    <ul className={css.contactsList}>
-      {filteredList.map(el => (
-        <Contact
-          handleRemove={handleRemove}
-          key={nanoid()}
-          name={el.name}
-          number={el.number}
-          id={el.id}
-        />
-      ))}
-    </ul>
+    <>
+      <h2 className={css.phonebookHeader}>Your Contacts</h2>
+      <ul className={css.contactsList}>
+        {filteredList.map(el => (
+          <Contact
+            handleRemove={handleRemove}
+            key={nanoid()}
+            name={el.name}
+            number={el.number}
+            id={el.id}
+          />
+        ))}
+      </ul>
+    </>
   );
 };
 

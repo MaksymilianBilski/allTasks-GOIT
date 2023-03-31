@@ -10,6 +10,14 @@
     background-color: rgb(130, 222, 250);
 }
 
+.phonebookHeader {
+    display: flex;
+    border: solid 3px skyblue;
+    max-width: 250px;
+    margin: 20px auto;
+    justify-content: center;
+}
+
 @media screen and (min-width: 768px) {
     .contactsList {
         border: 1px solid green;
