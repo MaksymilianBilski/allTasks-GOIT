@@ -13,6 +13,8 @@ import {
   getFilter,
 } from 'components/ComponentsPhonebook/redux/phonebookSelectors';
 import { NavLink } from 'react-router-dom';
+document.body.style.backgroundColor = 'rgb(158, 228, 176)';
+
 
 const Phonebook = () => {
   const dispatch = useDispatch();
