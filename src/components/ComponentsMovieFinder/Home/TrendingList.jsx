@@ -10,6 +10,7 @@ const TrendingList = () => {
     try {
       const response = await fetchTrending();
       setTrendingMovies(response.results);
+      console.log(response.results);
       return response.results;
     } catch (e) {
       return;
