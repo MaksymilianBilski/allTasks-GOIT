@@ -15,7 +15,7 @@ const Movie = ({ data }) => {
         to={`/details/${data.id}`}
         state={{ from: location }}
       >
-        {data.original_title ? data.original_title : data.name}
+        {data.title ? data.title : data.original_title}
       </NavLink>
       <img
         className={css.moviePoster}

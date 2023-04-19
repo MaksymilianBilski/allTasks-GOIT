@@ -15,3 +15,16 @@
     background-color: yellowgreen;
     box-shadow: 20px 12px 60px 40px rgb(114, 148, 46);
 }
+
+.listWrapper li:nth-child(2n) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.listWrapper li:nth-child(2n -1) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}

@@ -26,3 +26,16 @@
     border: 2px solid rgb(53, 1, 21);
     cursor: pointer;
 }
+
+.listWrapper li:nth-child(2n) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.listWrapper li:nth-child(2n -1) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}

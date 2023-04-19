@@ -13,6 +13,7 @@ import {
   getFilter,
 } from 'components/ComponentsPhonebook/redux/phonebookSelectors';
 import { NavLink } from 'react-router-dom';
+import ReturnHomepage from 'components/Navigation/ReturnHomepage';
 document.body.style.backgroundColor = 'rgb(158, 228, 176)';
 
 
@@ -55,7 +56,7 @@ const Phonebook = () => {
 
   return (
     <div>
-      <NavLink to="/allTasks-GOIT">HOMEPAGE</NavLink>
+      <ReturnHomepage />
       <SubmitForm handleSubmit={handleSubmit} />
       <ContactsList
         handleRemove={handleRemove}

@@ -11,6 +11,7 @@ import {
 import { Loader } from 'components/ComponentsImagesFinder/Loader/Loader';
 import Navigation from 'components/Navigation/Navigation';
 import { NavLink } from 'react-router-dom';
+import ReturnHomepage from 'components/Navigation/ReturnHomepage';
 
 export const TaskManager = () => {
   const isLoading = useSelector(getIsLoading);
@@ -23,6 +24,7 @@ export const TaskManager = () => {
 
   return (
     <>
+      <ReturnHomepage />
       <NavLink to="/allTasks-GOIT">HOMEPAGE</NavLink>
       {error ? (
         <div>

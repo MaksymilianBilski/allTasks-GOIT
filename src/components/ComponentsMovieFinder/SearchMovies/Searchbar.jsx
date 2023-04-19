@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import Movie from '../Movie/Movie';
 import { fetchByQuery } from '../operations/operationsMovies';
@@ -8,6 +8,13 @@ import css from './Searchbar.module.css';
 const Searchbar = () => {
   const [queryData, setQueryData] = useState();
   const [searchParams, setSearchParams] = useSearchParams();
+
+  useEffect(() => {
+    if (searchParams.get('query') === null) {
+      return;
+    }
+    searchMovies(searchParams.get('query'));
+  }, [searchParams]);
 
   const searchMovies = async query => {
     try {
@@ -24,7 +31,8 @@ const Searchbar = () => {
     const form = e.target;
     const inputValue = form.search.value;
     searchMovies(inputValue);
-    setSearchParams({ query: inputValue });
+    let params = { query: inputValue };
+    setSearchParams(params);
     if (10 === true) {
       console.log(searchParams);
     }

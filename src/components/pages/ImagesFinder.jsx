@@ -6,6 +6,8 @@ import Searchbar from '../ComponentsImagesFinder/Searchbar/Searchbar';
 import { Loader } from '../ComponentsImagesFinder/Loader/Loader';
 import { NavLink } from 'react-router-dom';
 import css from '../ComponentsImagesFinder/ImagesFinderWrapper.module.css';
+import ReturnHomepage from 'components/Navigation/ReturnHomepage';
+
 
 const ImagesFinder = () => {
   const [images, setImages] = useState([]);
@@ -60,7 +62,7 @@ const ImagesFinder = () => {
 
   return (
     <div className={css.ImagesFinderWrapper}>
-      <NavLink to="/allTasks-GOIT">HOMEPAGE</NavLink>
+      <ReturnHomepage />
       {isLoading === true && <Loader />}
       {isModalOpen ? (
         <Modal handleClose={onModalClose} src={modalFormatSrc} />
