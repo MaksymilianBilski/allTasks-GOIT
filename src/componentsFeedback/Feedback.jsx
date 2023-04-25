@@ -5,12 +5,12 @@ import Section from './Section/section';
 import StatisticList from './StatisticList/StatisticList';
 
 const Feedback = () => {
-  const [stat, setStat] = useState({ good: 0, neural: 0, bad: 0 });
+  const [stat, setStat] = useState({ good: 0, neutral: 0, bad: 0 });
   const [total, setTotal] = useState();
   const [positive, setPositive] = useState();
 
   const handleAddFeedback = evt => {
-    const btnName = evt.target.textContent;
+    const btnName = evt.target.textContent.toLowerCase();
     setStat(prevState => {
       return { ...prevState, [btnName]: prevState[btnName] + 1 };
     });

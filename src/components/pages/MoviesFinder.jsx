@@ -1,4 +1,4 @@
-import { NavLink, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import TrendingList from '../ComponentsMovieFinder/Home/TrendingList';
 import MovieDetails from '../ComponentsMovieFinder/MovieDetails/MovieDetails';
 import Reviews from '../ComponentsMovieFinder/Reviews/Reviews';
@@ -10,9 +10,6 @@ const MoviesFinder = () => {
   return (
     <div>
       <ReturnHomepage />
-      <NavLink to="searchbar">
-        <button>Search Movies</button>
-      </NavLink>
       <Routes>
         <Route path="moviesList" element={<TrendingList />} />
         <Route path="searchbar" element={<Searchbar />} />

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import { fetchTrending } from '../operations/operationsMovies';
 import Movie from '../Movie/Movie';
 import css from './TrendingList.module.css';
@@ -22,12 +23,17 @@ const TrendingList = () => {
   }, []);
 
   return (
-    <div className={css.listWrapper}>
-      <ul className={css.trendingList}>
-        {trendingMovies.map(el => (
-          <Movie data={el} />
-        ))}
-      </ul>
+    <div className={css.trendingContainer}>
+      <NavLink to="searchbar" className={css.searchMoviesBtn}>
+        <button>Search Movies</button>
+      </NavLink>
+      <div className={css.listWrapper}>
+        <ul className={css.trendingList}>
+          {trendingMovies.map(el => (
+            <Movie data={el} />
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

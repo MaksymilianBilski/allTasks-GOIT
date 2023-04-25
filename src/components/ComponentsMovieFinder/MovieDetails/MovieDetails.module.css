@@ -24,11 +24,10 @@
 }
 
 .backImage {
-    display: flex;
     position: absolute;
     z-index: -2;
-    width: 100rem;
-    height: 100rem;
+    width: 100vw;
+    height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;

@@ -1,0 +1,19 @@
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.listItem {
+    font-size: 66px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 5px;
+    width: 500px;
+    height: 150px;
+    border: 1px solid darkblue;
+}
