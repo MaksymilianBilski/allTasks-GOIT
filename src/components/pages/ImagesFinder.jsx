@@ -4,7 +4,6 @@ import Modal from '../ComponentsImagesFinder/Modal/Modal';
 import { fetchImages } from '../ComponentsImagesFinder/operations/imagesFinderOperation';
 import Searchbar from '../ComponentsImagesFinder/Searchbar/Searchbar';
 import { Loader } from '../ComponentsImagesFinder/Loader/Loader';
-import { NavLink } from 'react-router-dom';
 import css from '../ComponentsImagesFinder/ImagesFinderWrapper.module.css';
 import ReturnHomepage from 'components/Navigation/ReturnHomepage';
 
