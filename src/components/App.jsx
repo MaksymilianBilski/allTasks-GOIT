@@ -25,8 +25,8 @@ export class App extends Component {
         <Route path="/allTasks-GOIT/tasksManager" element={<TaskManager />} />
         <Route path="/allTasks-GOIT/movies" element={<MoviesFinder />}>
           <Route path="moviesList" element={<TrendingList />} />
+          <Route path="searchbar" element={<Searchbar />} />
         </Route>
-        <Route path="/allTasks-GOIT/movies/searchbar" element={<Searchbar />} />
         <Route
           path="/allTasks-GOIT/details/:movieId"
           element={<MovieDetails />}

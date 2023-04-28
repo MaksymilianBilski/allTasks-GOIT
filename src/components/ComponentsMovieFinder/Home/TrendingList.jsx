@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { fetchTrending } from '../operations/operationsMovies';
 import Movie from '../Movie/Movie';
 import css from './TrendingList.module.css';
@@ -22,9 +22,15 @@ const TrendingList = () => {
     createTrendingList();
   }, []);
 
+  const location = useLocation();
+
   return (
     <div className={css.trendingContainer}>
-      <NavLink to="moviesList/searchbar" className={css.searchMoviesBtn}>
+      <NavLink
+        to="searchbar"
+        className={css.searchMoviesBtn}
+        state={{ from: location }}
+      >
         <button>Search Movies</button>
       </NavLink>
       <div className={css.listWrapper}>
