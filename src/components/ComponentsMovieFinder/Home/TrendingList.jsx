@@ -24,7 +24,7 @@ const TrendingList = () => {
 
   return (
     <div className={css.trendingContainer}>
-      <NavLink to="searchbar" className={css.searchMoviesBtn}>
+      <NavLink to="moviesList/searchbar" className={css.searchMoviesBtn}>
         <button>Search Movies</button>
       </NavLink>
       <div className={css.listWrapper}>
