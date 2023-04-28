@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Button from 'componentsFeedback/Button/Button';
+import Button from 'components/componentsFeedback/Button/Button';
 import { fetchDetails } from '../operations/operationsMovies';
 import { NavLink, Outlet, useLocation, useParams } from 'react-router-dom';
 import css from './MovieDetails.module.css';
