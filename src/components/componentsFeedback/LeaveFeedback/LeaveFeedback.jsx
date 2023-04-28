@@ -1,5 +1,5 @@
 import { nanoid } from 'nanoid';
-import Button from 'componentsFeedback/Button/Button';
+import Button from 'components/common/Button/Button';
 import css from './LeaveFeedback.module.css';
 
 const LeaveFeedback = ({ state, handleClick }) => {
