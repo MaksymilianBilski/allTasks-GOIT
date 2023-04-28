@@ -10,7 +10,6 @@ import {
 } from 'components/ComponentsTaskManager/redux/tasksSelectors';
 import { Loader } from 'components/ComponentsImagesFinder/Loader/Loader';
 import Navigation from 'components/Navigation/Navigation';
-import { NavLink } from 'react-router-dom';
 import ReturnHomepage from 'components/Navigation/ReturnHomepage';
 
 export const TaskManager = () => {
