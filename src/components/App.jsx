@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Quiz } from './pages/Quiz';
-import Feedback from 'componentsFeedback/Feedback';
+import Feedback from './componentsFeedback/Feedback';
 import Phonebook from './pages/Phoneboook';
 import ImagesFinder from './pages/ImagesFinder';
 import MoviesFinder from './pages/MoviesFinder';
