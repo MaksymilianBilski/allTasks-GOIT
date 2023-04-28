@@ -25,7 +25,6 @@ export const TaskManager = () => {
   return (
     <>
       <ReturnHomepage />
-      <NavLink to="/allTasks-GOIT">HOMEPAGE</NavLink>
       {error ? (
         <div>
           <Navigation />
