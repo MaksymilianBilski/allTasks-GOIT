@@ -16,6 +16,7 @@ const MovieDetails = () => {
     try {
       const response = await fetchDetails(id);
       setDetailsData(response);
+      console.log(response, 'z fetcha');
       return response;
     } catch (e) {
       return;

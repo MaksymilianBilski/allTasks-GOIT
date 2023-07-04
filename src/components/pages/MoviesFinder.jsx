@@ -4,12 +4,10 @@ import MovieDetails from '../ComponentsMovieFinder/MovieDetails/MovieDetails';
 import Reviews from '../ComponentsMovieFinder/Reviews/Reviews';
 import Cast from '../ComponentsMovieFinder/Cast/Cast';
 import Searchbar from '../ComponentsMovieFinder/SearchMovies/Searchbar';
-import ReturnHomepage from 'components/Navigation/ReturnHomepage';
 
 const MoviesFinder = () => {
   return (
     <div>
-      <ReturnHomepage />
       <Routes>
         <Route path="moviesList" element={<TrendingList />} />
         <Route path="searchbar" element={<Searchbar />} />

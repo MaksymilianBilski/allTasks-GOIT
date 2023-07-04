@@ -1,9 +1,19 @@
-.trendingList {
+.trendingContainer {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.trendingHeader {
+    background-color: black;
+    border: 2px dotted darkorange;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    box-shadow: 20px 12px 60px 40px rgb(143, 47, 47)
+}
+
+.trendingList {
     padding: 0;
-    margin: 0 auto;
-    text-align: center;
 }
 
 .listWrapper {
@@ -11,35 +21,78 @@
     margin: 0 auto;
     max-width: 767px;
     color: rgb(182, 88, 11);
-    font-weight: 700;
-    background-color: yellowgreen;
-    box-shadow: 20px 12px 60px 40px rgb(114, 148, 46);
+    font-weight: 400;
+    background-color: rgb(26, 22, 22);
 }
 
 .listWrapper li:nth-child(2n) {
     display: flex;
+    padding-left: 5px;
     flex-direction: row-reverse;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
 .listWrapper li:nth-child(2n -1) {
     display: flex;
+    padding-right: 5px;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-around;
 }
 
-.trendingContainer {
-    display: flex;
-}
 
-.searchMoviesBtn {
-    width: 0px;
-    margin: 200px 5vw;
-}
 
 .searchMoviesBtn btn {
     color: red;
     width: 250px;
     height: 100px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .trendingList {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .listWrapper {
+        display: flex;
+        margin: 0 auto;
+        max-width: 767px;
+        color: rgb(182, 88, 11);
+        font-weight: 700;
+    }
+
+    .listWrapper li:nth-child(2n) {
+        display: flex;
+        padding-left: 10px;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .listWrapper li:nth-child(2n -1) {
+        display: flex;
+        padding-right: 10px;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .trendingContainer {
+        display: flex;
+    }
+
+    .searchMoviesBtn {
+        width: 0px;
+        margin: 200px 5vw;
+    }
+
+    .searchMoviesBtn btn {
+        color: red;
+        width: 250px;
+        height: 100px;
+    }
 }

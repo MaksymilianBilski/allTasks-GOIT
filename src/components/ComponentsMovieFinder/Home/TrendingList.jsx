@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { fetchTrending } from '../operations/operationsMovies';
+import ReturnHomepage from 'components/Navigation/ReturnHomepage';
 import Movie from '../Movie/Movie';
 import css from './TrendingList.module.css';
 
@@ -26,13 +27,16 @@ const TrendingList = () => {
 
   return (
     <div className={css.trendingContainer}>
-      <NavLink
-        to="searchbar"
-        className={css.searchMoviesBtn}
-        state={{ from: location }}
-      >
-        <button>Search Movies</button>
-      </NavLink>
+      <div className={css.trendingHeader}>
+        <ReturnHomepage />
+        <NavLink
+          to="searchbar"
+          className={css.searchMoviesBtn}
+          state={{ from: location }}
+        >
+          <button>Search Movies</button>
+        </NavLink>
+      </div>
       <div className={css.listWrapper}>
         <ul className={css.trendingList}>
           {trendingMovies.map(el => (
