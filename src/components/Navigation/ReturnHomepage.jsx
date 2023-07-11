@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 
-const ReturnHomepage = () => {
-  return <NavLink to="/allTasks-GOIT"> &larr; RETURN TO HOMEPAGE</NavLink>;
+const ReturnHomepage = ({ text }) => {
+  return <NavLink to="/allTasks-GOIT"> &larr; {text}</NavLink>;
 };
 
 export default ReturnHomepage;

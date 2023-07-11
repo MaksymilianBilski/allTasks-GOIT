@@ -1,8 +1,15 @@
     .movieItem {
         margin: 8px auto;
-        max-width: 750px;
         height: 130px;
-        border: 2px rgb(158, 96, 3) dashed;
+        border: 2px rgb(235, 147, 16) dashed;
+        background-color: black;
+        transition: ease-in-out 150ms all;
+    }
+
+    @media (width <=479px) {
+        .movieItem {
+            max-width: 750px;
+        }
     }
 
     .moviePoster {
@@ -17,10 +24,15 @@
         font-size: 20px;
         font-weight: 700;
         max-width: 50%;
+        transition: 150ms ease-in-out all;
     }
 
     .navLink:hover {
         color: rgb(182, 88, 11);
+    }
+
+    .movieItem:hover {
+        border-color: rgb(182, 88, 11);
     }
 
     @media (width >=480px) {
@@ -40,25 +52,27 @@
     @media (width >=768px) {
         .movieItem {
             margin: 8px auto;
-            width: 600px;
+            width: 80%;
             height: 185px;
-            border: 2px rgb(158, 96, 3) dashed;
         }
 
         .moviePoster {
-            width: 300px;
-            height: auto;
+            width: 40%;
+            height: 90%;
         }
 
         .navLink {
-            color: rgb(235, 147, 16);
-            text-decoration: none;
             font-size: 30px;
             font-weight: 700;
             width: 200px;
         }
 
-        .navLink:hover {
-            color: rgb(182, 88, 11);
+    }
+
+    @media(width >=1280px) {
+        .movieItem {
+            margin: 8px auto;
+            width: 47%;
+            height: 185px;
         }
     }

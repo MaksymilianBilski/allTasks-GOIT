@@ -1,7 +1,13 @@
 import { useEffect, useState } from 'react';
 import Button from 'components/componentsFeedback/Button/Button';
 import { fetchDetails } from '../operations/operationsMovies';
-import { NavLink, Outlet, useLocation, useParams } from 'react-router-dom';
+import {
+  NavLink,
+  Outlet,
+  useLocation,
+  useOutletContext,
+  useParams,
+} from 'react-router-dom';
 import css from './MovieDetails.module.css';
 
 const photoURL = 'https://image.tmdb.org/t/p/w500/';
@@ -10,18 +16,20 @@ const substPhotoURL =
 
 const MovieDetails = () => {
   const [detailsData, setDetailsData] = useState([]);
+  const [photo, setPhoto] = useState('');
   const location = useLocation();
 
   const createMovieDetails = async id => {
     try {
       const response = await fetchDetails(id);
       setDetailsData(response);
-      console.log(response, 'z fetcha');
+      setPhoto(`${photoURL + response.backdrop_path}`);
       return response;
     } catch (e) {
       return;
     }
   };
+
   const { movieId } = useParams();
 
   useEffect(() => {
@@ -30,11 +38,11 @@ const MovieDetails = () => {
 
   return (
     detailsData !== undefined && (
-      <div>
+      <div className={css.detailsContainer}>
         <div
           className={css.backImage}
           style={{
-            background: `url('${photoURL + detailsData.backdrop_path}'),
+            backgroundImage: `url('${photoURL + detailsData.backdrop_path}'),
             url('${substPhotoURL}')`,
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
@@ -63,30 +71,42 @@ const MovieDetails = () => {
           </figure>
           <div className={css.description}>
             <h2>
-              {detailsData.original_title
-                ? detailsData.original_title
-                : detailsData.name}
-              ({detailsData.release_date})
+              {detailsData.title ? detailsData.title : detailsData.name}(
+              {detailsData.release_date ?? 'Date unknown'})
             </h2>
-            <span>User Score: {detailsData.vote_average}%</span>
-            <h3> Overview</h3>
-            <span>{detailsData.overview}</span>
-            <h4>Genres</h4>
             <span>
-              {detailsData.genres !== undefined &&
-                detailsData.genres.map(el => el.name)}
+              Rates:{' '}
+              {detailsData.vote_average
+                ? detailsData.vote_average.toFixed(2)
+                : 0}
+              &#9733;
             </span>
+            <h2> Overview</h2>
+            <p>{detailsData.overview}</p>
+            <h2>Genres</h2>
+            <p>
+              {detailsData.genres !== undefined &&
+                detailsData.genres.map(el => el.name + ' ')}
+            </p>
           </div>
         </div>
-        <span>Additional Information</span>
-        <NavLink state={{ from: location }} to={`/details/${movieId}/reviews`}>
-          reviews
-        </NavLink>
-        <NavLink state={{ from: location }} to={`/details/${movieId}/credits`}>
-          credits
-        </NavLink>
+        <div className={css.additionalInfo}>
+          <span>MORE INFO</span>
+          <NavLink
+            state={{ from: location }}
+            to={`/allTasks-GOIT/details/${movieId}/reviews`}
+          >
+            reviews
+          </NavLink>
 
-        <Outlet />
+          <NavLink
+            state={{ from: location }}
+            to={`/allTasks-GOIT/details/${movieId}/credits`}
+          >
+            credits
+          </NavLink>
+        </div>
+        <Outlet context={photo} />
       </div>
     )
   );

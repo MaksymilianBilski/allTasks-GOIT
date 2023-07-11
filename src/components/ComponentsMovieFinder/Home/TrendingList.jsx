@@ -28,7 +28,7 @@ const TrendingList = () => {
   return (
     <div className={css.trendingContainer}>
       <div className={css.trendingHeader}>
-        <ReturnHomepage />
+        <ReturnHomepage text={'back homepage'} />
         <NavLink
           to="searchbar"
           className={css.searchMoviesBtn}

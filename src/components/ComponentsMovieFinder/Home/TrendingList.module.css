@@ -3,15 +3,6 @@
     flex-direction: column;
 }
 
-.trendingHeader {
-    background-color: black;
-    border: 2px dotted darkorange;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    box-shadow: 20px 12px 60px 40px rgb(143, 47, 47)
-}
-
 .trendingList {
     padding: 0;
 }
@@ -19,10 +10,10 @@
 .listWrapper {
     display: flex;
     margin: 0 auto;
-    max-width: 767px;
     color: rgb(182, 88, 11);
     font-weight: 400;
     background-color: rgb(26, 22, 22);
+    background-color: rgb(41, 41, 41);
 }
 
 .listWrapper li:nth-child(2n) {
@@ -40,59 +31,74 @@
     justify-content: space-around;
 }
 
+.trendingHeader {
+    height: 50px;
+    display: flex;
+    background-color: black;
+    border: 2px dotted darkorange;
+    align-items: center;
+}
 
+.trendingHeader>a:first-child {
+    width: 60px;
+    font-size: 12px;
+    margin-left: 20px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px dotted rgb(241, 147, 6);
+    border-radius: 3px;
+    background-color: rgb(117, 114, 114);
+    color: orange;
+}
 
-.searchMoviesBtn btn {
+.trendingHeader>a:first-child:hover {
+    background-color: rgb(87, 84, 84);
     color: red;
-    width: 250px;
-    height: 100px;
+}
+
+.searchMoviesBtn {
+    margin-left: 25%;
+}
+
+.searchMoviesBtn button {
+    height: 28px;
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    background-color: rgb(185, 112, 2);
+    border: 1px solid rgb(185, 112, 2);
+    border-radius: 3px;
+    transition-duration: 250ms;
+}
+
+.searchMoviesBtn button:hover {
+    background-color: orange;
+    cursor: pointer;
+}
+
+@media (width >=480px) {
+    .trendingHeader>a {
+        font-size: 14px;
+    }
 }
 
 
-@media screen and (min-width: 768px) {
+@media (width >=768px) {
     .trendingList {
         display: flex;
         flex-wrap: wrap;
         padding: 0;
-        margin: 0 auto;
-        text-align: left;
-    }
-
-    .listWrapper {
-        display: flex;
-        margin: 0 auto;
-        max-width: 767px;
-        color: rgb(182, 88, 11);
-        font-weight: 700;
     }
 
     .listWrapper li:nth-child(2n) {
-        display: flex;
         padding-left: 10px;
-        flex-direction: row-reverse;
         justify-content: flex-end;
-        align-items: center;
     }
 
     .listWrapper li:nth-child(2n -1) {
-        display: flex;
         padding-right: 10px;
-        align-items: center;
         justify-content: flex-end;
     }
 
-    .trendingContainer {
-        display: flex;
-    }
-
-    .searchMoviesBtn {
-        width: 0px;
-        margin: 200px 5vw;
-    }
-
-    .searchMoviesBtn btn {
-        color: red;
-        width: 250px;
-        height: 100px;
-    }
 }
+

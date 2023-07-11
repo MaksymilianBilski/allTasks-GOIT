@@ -28,7 +28,7 @@ export class App extends Component {
           <Route path="searchbar" element={<Searchbar />} />
         </Route>
         <Route
-          path="/allTasks-GOIT/details/:movieId"
+          path="/allTasks-GOIT/details/:movieId/"
           element={<MovieDetails />}
         >
           <Route path="credits" element={<Cast />} />

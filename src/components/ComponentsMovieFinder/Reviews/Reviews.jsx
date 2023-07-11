@@ -1,17 +1,28 @@
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useState, useEffect, useRef } from 'react';
+import { Outlet, useOutletContext, useParams } from 'react-router-dom';
 import { fetchReviews } from '../operations/operationsMovies';
+import css from './Reviews.module.css';
 
+const GetPhoto = () => {
+  const photoProps = <Outlet context={useOutletContext()} />;
+  return photoProps.props.context;
+};
 const Reviews = () => {
-  const { movieId } = useParams();
   const [reviews, setReviews] = useState();
-  console.log(movieId);
+  const { movieId } = useParams();
+  //for get <outlet> height(because its not known before some action)
+  const [height, setHeight] = useState(0);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    setHeight(ref.current.clientHeight === null ? 0 : ref.current.clientHeight);
+  });
 
   const createReviewsData = async id => {
     try {
       const response = await fetchReviews(id);
       setReviews(response.results);
-      
+
       return response.results;
     } catch (e) {
       return;
@@ -24,11 +35,24 @@ const Reviews = () => {
 
   return (
     <div>
-      <ul>
+      <div
+        className={css.backImage}
+        style={{
+          backgroundImage: `url(${GetPhoto()})`,
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          height: `${height}px`,
+        }}
+      ></div>
+      <ul className={css.reviewList} ref={ref}>
         {reviews !== undefined &&
           reviews.map(el => (
-            <li>
-              <h3>Author: {el.author}</h3>
+            <li className={css.review}>
+              <h3>
+                Author:
+                {' ' + el.author}
+              </h3>
               <p>{el.content}</p>
             </li>
           ))}
