@@ -19,13 +19,12 @@ const Cast = () => {
 
   useEffect(() => {
     setHeight(ref.current.clientHeight === null ? 0 : ref.current.clientHeight);
-  });
+  }, []);
 
   const createReviewsData = async id => {
     try {
       const response = await fetchCast(id);
       setCast(response.cast);
-      console.log(response.cast);
       return response.cast;
     } catch (e) {
       return;

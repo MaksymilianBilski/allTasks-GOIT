@@ -16,7 +16,7 @@ const Reviews = () => {
 
   useEffect(() => {
     setHeight(ref.current.clientHeight === null ? 0 : ref.current.clientHeight);
-  });
+  }, []);
 
   const createReviewsData = async id => {
     try {
