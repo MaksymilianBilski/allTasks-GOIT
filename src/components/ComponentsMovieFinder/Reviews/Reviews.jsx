@@ -21,9 +21,8 @@ const Reviews = () => {
   const createReviewsData = async id => {
     try {
       const response = await fetchReviews(id);
-      setReviews(response.results);
-
-      return response.results;
+      setReviews(response.results.length !== 0 ? response.results : undefined);
+      return response.results.length !== 0 ? response.results : undefined;
     } catch (e) {
       return;
     }
@@ -46,7 +45,7 @@ const Reviews = () => {
         }}
       ></div>
       <ul className={css.reviewList} ref={ref}>
-        {reviews !== undefined &&
+        {reviews !== undefined ? (
           reviews.map(el => (
             <li className={css.review}>
               <h3>
@@ -55,7 +54,12 @@ const Reviews = () => {
               </h3>
               <p>{el.content}</p>
             </li>
-          ))}
+          ))
+        ) : (
+          <div className={css.noReviews}>
+            There are no reviews at the moment
+          </div>
+        )}
       </ul>
     </div>
   );

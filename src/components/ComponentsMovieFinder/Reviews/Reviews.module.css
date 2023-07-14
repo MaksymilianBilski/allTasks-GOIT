@@ -3,7 +3,6 @@
 }
 
 .reviewList {
-    padding: 0;
     list-style: decimal;
 }
 
@@ -21,6 +20,14 @@
     margin-bottom: 25px;
 }
 
+.noReviews {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    color: red;
+    text-shadow: 1px 1px 10px black, -1px 1px 10px black, 1px -1px 10px black, -1px -1px 10px black
+}
+
 
 .reviewList li::-webkit-scrollbar {
     box-shadow: inset 0px 0px 6px gray;
@@ -29,6 +36,18 @@
 
 .reviewList li::-webkit-scrollbar-thumb {
     background-color: rgba(255, 166, 0, 0.315);
+}
+
+@media (width >=767px) {
+    .noReviews {
+        font-size: 25px
+    }
+}
+
+@media (width >=1279px) {
+    .noReviews {
+        font-size: 35px
+    }
 }
 
 @media (width >=1280px) {

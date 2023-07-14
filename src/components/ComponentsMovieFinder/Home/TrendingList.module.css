@@ -3,9 +3,6 @@
     flex-direction: column;
 }
 
-.trendingList {
-    padding: 0;
-}
 
 .listWrapper {
     display: flex;
@@ -86,7 +83,6 @@
     .trendingList {
         display: flex;
         flex-wrap: wrap;
-        padding: 0;
     }
 
     .listWrapper li:nth-child(2n) {

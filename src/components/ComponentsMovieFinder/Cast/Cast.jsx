@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useOutletContext, useParams, Outlet } from 'react-router-dom';
 import { fetchCast } from '../operations/operationsMovies';
+import noPhoto from '../../../images/noPhoto.png';
 import css from './Cast.module.css';
 
 const photoURL = 'https://image.tmdb.org/t/p/w500/';
@@ -24,6 +25,7 @@ const Cast = () => {
     try {
       const response = await fetchCast(id);
       setCast(response.cast);
+      console.log(response.cast);
       return response.cast;
     } catch (e) {
       return;
@@ -50,10 +52,17 @@ const Cast = () => {
         {cast !== undefined &&
           cast.map(el => (
             <li className={css.castElement}>
-              <img alt="" src={photoURL + el.profile_path} />
+              <img
+                alt=""
+                src={el.profile_path ? photoURL + el.profile_path : noPhoto}
+              />
               <div>
-                <h3>Actor: {el.name}</h3>
-                <p>Character: {el.character}</p>
+                <h3>
+                  Actor: <span>{el.name}</span>
+                </h3>
+                <p>
+                  Character: <span>{el.character}</span>
+                </p>
               </div>
             </li>
           ))}

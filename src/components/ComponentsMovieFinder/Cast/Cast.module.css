@@ -1,10 +1,36 @@
+.castList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .castElement {
     display: flex;
-    margin-bottom: 20px;
+    border: 1px dashed orange;
+    width: 300px;
+    margin-bottom: 10px;
 }
 
 .castElement img {
-    width: 125px;
+    width: 130px;
+    height: 150px;
+}
+
+.castElement div {
+    font-size: 18px;
+    margin: 0 auto;
+}
+
+.castElement div h3,
+p {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.castElement div span {
+    font-size: 16px;
+    text-shadow: 0px 0px 5px orange;
 }
 
 .backImage {
@@ -13,4 +39,97 @@
     left: 0px;
     z-index: -2;
     -webkit-filter: blur(30px)
+}
+
+@media (width >=768px) {
+    .castList {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .castElement:nth-child(2n+2) {
+        margin-left: 20px;
+    }
+
+    .castElement {
+        width: 350px;
+        height: 175px;
+        margin-bottom: 15px;
+    }
+
+    .castElement img {
+        width: 160px;
+        height: 175px;
+    }
+
+
+    .castElement div {
+        font-size: 22px;
+    }
+
+
+    .castElement div span {
+        font-size: 20px;
+    }
+}
+
+@media (width >=1025px) {
+    .castElement:nth-child(2n+2) {
+        margin-left: 25px;
+    }
+
+    .castElement {
+        width: 420px;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+
+    .castElement img {
+        width: 200px;
+        height: 250px;
+    }
+
+
+    .castElement div {
+        font-size: 23px;
+    }
+
+
+    .castElement div span {
+        font-size: 21px;
+    }
+}
+
+@media (width >=1280px) {
+    .castList {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    .castElement:nth-child(2n+2) {
+        margin-left: 0px;
+    }
+
+    .castElement:nth-child(3n+2) {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .castElement {
+        width: 400px;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+
+    .castElement img {
+        width: 200px;
+        height: 250px;
+    }
+
+
+    .castElement div {
+        font-size: 23px;
+    }
+
 }
