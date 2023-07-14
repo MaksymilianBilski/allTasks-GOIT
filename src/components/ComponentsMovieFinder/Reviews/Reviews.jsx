@@ -4,8 +4,8 @@ import { fetchReviews } from '../operations/operationsMovies';
 import css from './Reviews.module.css';
 
 const GetPhoto = () => {
-  const photoProps = <Outlet context={useOutletContext()} />;
-  return photoProps.props.context;
+  const reviewsContext = <Outlet context={useOutletContext()} />;
+  return reviewsContext.props.context;
 };
 const Reviews = () => {
   const [reviews, setReviews] = useState();

@@ -1,12 +1,24 @@
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useState, useEffect, useRef } from 'react';
+import { useOutletContext, useParams, Outlet } from 'react-router-dom';
 import { fetchCast } from '../operations/operationsMovies';
+import css from './Cast.module.css';
 
 const photoURL = 'https://image.tmdb.org/t/p/w500/';
 
+const GetPhoto = () => {
+  const castContext = <Outlet context={useOutletContext()} />;
+  return castContext.props.context;
+};
+
 const Cast = () => {
+  const [height, setHeight] = useState(0);
+  const ref = useRef(null);
   const { movieId } = useParams();
   const [cast, setCast] = useState();
+
+  useEffect(() => {
+    setHeight(ref.current.clientHeight === null ? 0 : ref.current.clientHeight);
+  });
 
   const createReviewsData = async id => {
     try {
@@ -23,14 +35,26 @@ const Cast = () => {
   }, [movieId]);
 
   return (
-    <div>
-      <ul>
+    <div className={css.castWrapper}>
+      <div
+        className={css.backImage}
+        style={{
+          backgroundImage: `url(${GetPhoto()})`,
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          height: `${height}px`,
+        }}
+      ></div>
+      <ul ref={ref} className={css.castList}>
         {cast !== undefined &&
           cast.map(el => (
-            <li>
+            <li className={css.castElement}>
               <img alt="" src={photoURL + el.profile_path} />
-              <h3>Actor: {el.name}</h3>
-              <p>Character{el.character}</p>
+              <div>
+                <h3>Actor: {el.name}</h3>
+                <p>Character: {el.character}</p>
+              </div>
             </li>
           ))}
       </ul>

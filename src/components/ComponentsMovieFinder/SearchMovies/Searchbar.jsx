@@ -4,6 +4,7 @@ import Movie from '../Movie/Movie';
 import { fetchByQuery } from '../operations/operationsMovies';
 import { Form } from 'components/common/Form/Form';
 import css from './Searchbar.module.css';
+import ReturnHomepage from 'components/Navigation/ReturnHomepage';
 
 const Searchbar = () => {
   const [queryData, setQueryData] = useState();
@@ -40,13 +41,17 @@ const Searchbar = () => {
   };
 
   return (
-    <div className={css.searchWrapper}>
-      <Form
-        handleFormSubmit={handleSubmit}
-        type="text"
-        name="search"
-        placeholder="search for movies"
-      />
+    <div className={css.searchContainer}>
+      <div className={css.searchHeader}>
+        <ReturnHomepage text={'back homepage'} />
+        <Form
+          handleFormSubmit={handleSubmit}
+          type="text"
+          name="search"
+          placeholder="search for movies"
+          classNameInput={css.searchInput}
+        />
+      </div>
       <div className={css.listWrapper}>
         <ul className={css.searchList}>
           {queryData && queryData.map(el => <Movie data={el} />)}

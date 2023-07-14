@@ -30,7 +30,7 @@ const TrendingList = () => {
       <div className={css.trendingHeader}>
         <ReturnHomepage text={'back homepage'} />
         <NavLink
-          to="searchbar"
+          to="/allTasks-GOIT/movies/searchbar"
           className={css.searchMoviesBtn}
           state={{ from: location }}
         >

@@ -1,41 +1,106 @@
-.searchList {
-    list-style: numbers;
-    display: grid;
-    grid-gap: 5px;
+.searchContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: rgb(41, 41, 41);
 }
+
 
 .listWrapper {
     display: flex;
     margin: 0 auto;
-    max-width: 600px;
-    min-height: 500px;
     color: rgb(182, 88, 11);
-    font-weight: 700;
-    background-color: yellowgreen;
-    box-shadow: 20px 12px 60px 40px rgb(114, 148, 46);
+    font-weight: 400;
+    background-color: rgb(41, 41, 41);
 }
 
-.searchWrapper>form>input {
-    display: flex;
-    width: 300px;
-    margin: 5px auto;
-}
-
-.searchWrapper>form>input:hover {
-    background-color: rgb(121, 6, 50);
-    border: 2px solid rgb(53, 1, 21);
-    cursor: pointer;
+.searchList {
+    padding: 0;
 }
 
 .listWrapper li:nth-child(2n) {
     display: flex;
+    padding-left: 5px;
     flex-direction: row-reverse;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
 .listWrapper li:nth-child(2n -1) {
     display: flex;
+    padding-right: 5px;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-around;
+}
+
+.searchHeader {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    border: 2px dotted darkorange;
+    align-items: center;
+}
+
+.searchHeader>a:first-child {
+    width: 60px;
+    font-size: 12px;
+    margin-left: 20px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px dotted rgb(241, 147, 6);
+    border-radius: 3px;
+    background-color: rgb(117, 114, 114);
+    color: orange;
+}
+
+.searchHeader>a:first-child:hover {
+    background-color: rgb(87, 84, 84);
+    color: red;
+}
+
+.searchHeader a:first-child {
+    margin-right: 15px;
+}
+
+.searchInput {
+    height: 28px;
+    width: 125px;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(185, 112, 2);
+    border-radius: 3px;
+    transition-duration: 250ms;
+}
+
+.searchInput:hover {
+    background-color: orange;
+}
+
+@media (width >=480px) {
+    .searchHeader>a {
+        font-size: 14px;
+    }
+}
+
+
+@media (width >=768px) {
+    .searchList {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .listWrapper li:nth-child(2n) {
+        padding-left: 10px;
+        justify-content: flex-end;
+    }
+
+    .listWrapper li:nth-child(2n -1) {
+        padding-right: 10px;
+        justify-content: flex-end;
+    }
+
 }

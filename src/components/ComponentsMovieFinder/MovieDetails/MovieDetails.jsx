@@ -1,13 +1,7 @@
 import { useEffect, useState } from 'react';
 import Button from 'components/componentsFeedback/Button/Button';
 import { fetchDetails } from '../operations/operationsMovies';
-import {
-  NavLink,
-  Outlet,
-  useLocation,
-  useOutletContext,
-  useParams,
-} from 'react-router-dom';
+import { NavLink, Outlet, useLocation, useParams } from 'react-router-dom';
 import css from './MovieDetails.module.css';
 
 const photoURL = 'https://image.tmdb.org/t/p/w500/';

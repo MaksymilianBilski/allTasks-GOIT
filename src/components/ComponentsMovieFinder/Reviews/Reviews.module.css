@@ -15,3 +15,27 @@
     -webkit-filter: blur(30px)
 }
 
+.reviewList li {
+    overflow-y: scroll;
+    max-height: 150px;
+    margin-bottom: 25px;
+}
+
+
+.reviewList li::-webkit-scrollbar {
+    box-shadow: inset 0px 0px 6px gray;
+    width: 7px;
+}
+
+.reviewList li::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 166, 0, 0.315);
+}
+
+@media (width >=1280px) {
+    .reviewList li {
+        margin: 50px auto;
+        width: 1000px;
+        max-height: 200px
+    }
+
+}
