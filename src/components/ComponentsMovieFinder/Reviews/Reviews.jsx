@@ -9,14 +9,15 @@ const GetPhoto = () => {
 };
 const Reviews = () => {
   const [reviews, setReviews] = useState();
-  const { movieId } = useParams();
-  //for get <outlet> height(because its not known before some action)
   const [height, setHeight] = useState(0);
   const ref = useRef(null);
+  const { movieId } = useParams();
 
   useEffect(() => {
-    setHeight(ref.current.clientHeight === null ? 0 : ref.current.clientHeight);
-  }, []);
+    if (ref.current) {
+      setHeight(ref.current === null ? 0 : ref.current);
+    }
+  }, [ref, reviews]);
 
   const createReviewsData = async id => {
     try {
@@ -33,7 +34,7 @@ const Reviews = () => {
   }, [movieId]);
 
   return (
-    <div>
+    <div ref={ref}>
       <div
         className={css.backImage}
         style={{
@@ -41,7 +42,7 @@ const Reviews = () => {
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
-          height: `${height}px`,
+          height: `${height.clientHeight}px`,
         }}
       ></div>
       <ul className={css.reviewList} ref={ref}>

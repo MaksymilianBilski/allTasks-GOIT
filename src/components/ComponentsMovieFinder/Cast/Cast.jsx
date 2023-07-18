@@ -13,13 +13,16 @@ const GetPhoto = () => {
 
 const Cast = () => {
   const [height, setHeight] = useState(0);
+  const [cast, setCast] = useState();
   const ref = useRef(null);
   const { movieId } = useParams();
-  const [cast, setCast] = useState();
 
   useEffect(() => {
-    setHeight(ref.current.clientHeight === null ? 0 : ref.current.clientHeight);
-  }, []);
+    if (ref.current) {
+      console.log(height);
+      setHeight(ref.current === null ? 0 : ref.current.clientHeight);
+    }
+  }, [height, cast]);
 
   const createReviewsData = async id => {
     try {

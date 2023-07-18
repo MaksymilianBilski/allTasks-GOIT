@@ -33,12 +33,12 @@
     background-color: black;
     border: 2px dotted darkorange;
     align-items: center;
+    justify-content: center;
 }
 
 .trendingHeader>a:first-child {
     width: 60px;
     font-size: 12px;
-    margin-left: 20px;
     text-align: center;
     text-decoration: none;
     border: 1px dotted rgb(241, 147, 6);
@@ -53,7 +53,7 @@
 }
 
 .searchMoviesBtn {
-    margin-left: 25%;
+    margin-left: 20px;
 }
 
 .searchMoviesBtn button {

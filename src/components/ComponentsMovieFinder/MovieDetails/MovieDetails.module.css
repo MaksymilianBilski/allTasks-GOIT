@@ -55,6 +55,8 @@
 }
 
 .additionalInfo>a {
+    align-self: center;
+    width: 60px;
     text-decoration: none;
     color: orange;
     text-shadow: 4px 4px 2px black;
