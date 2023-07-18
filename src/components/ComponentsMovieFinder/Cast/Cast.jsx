@@ -19,7 +19,6 @@ const Cast = () => {
 
   useEffect(() => {
     if (ref.current) {
-      console.log(height);
       setHeight(ref.current === null ? 0 : ref.current.clientHeight);
     }
   }, [height, cast]);

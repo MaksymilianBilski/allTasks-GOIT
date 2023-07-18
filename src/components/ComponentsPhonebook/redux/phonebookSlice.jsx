@@ -10,7 +10,6 @@ export const phonebookSlice = createSlice({
       state.contacts.push(action.payload);
     },
     deleteContact(state, action) {
-      console.log(action.payload);
       const tabIndex = state.contacts.find(el => el.id === action.payload);
       state.contacts.splice(tabIndex, 1);
     },

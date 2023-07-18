@@ -50,7 +50,7 @@ const MovieDetails = () => {
               : '/allTasks-GOIT/movies/moviesList'
           }
         >
-          <Button type="button" name="go back" />
+          <Button className={css.goBackBtn} type="button" name="go back" />
         </NavLink>
         <div className={css.descriptionWrapper}>
           <figure className={css.imageWrapper}>

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import LeaveFeedback from './LeaveFeedback/LeaveFeedback';
 import Section from './Section/section';
 import StatisticList from './StatisticList/StatisticList';
+document.body.style.backgroundColor = 'rgb(138, 28, 120)';
 
 const Feedback = () => {
   const [stat, setStat] = useState({ good: 0, neutral: 0, bad: 0 });

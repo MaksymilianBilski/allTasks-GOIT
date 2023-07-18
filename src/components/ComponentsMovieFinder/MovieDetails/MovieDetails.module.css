@@ -3,6 +3,23 @@
     margin: 0 auto;
 }
 
+.goBackBtn {
+    width: 60px;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px dotted rgb(241, 147, 6);
+    border-radius: 3px;
+    background-color: rgb(117, 114, 114);
+    color: orange;
+    transition: all 150ms;
+}
+
+.goBackBtn:hover {
+    background-color: rgb(87, 84, 84);
+    color: red;
+    cursor: pointer;
+}
 
 .backImage {
     position: absolute;
