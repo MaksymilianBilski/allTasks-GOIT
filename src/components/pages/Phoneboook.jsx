@@ -53,7 +53,15 @@ const Phonebook = () => {
   };
 
   return (
-    <div>
+    <div
+      style={{
+        height: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        marginTop: '-10%',
+      }}
+    >
       <ReturnHomepage />
       <SubmitForm handleSubmit={handleSubmit} />
       <ContactsList

@@ -26,7 +26,7 @@
 .contact span {
     font-weight: 700;
     font-size: 14px;
-    max-width: 75px;
+    width: 75px;
     inline-size: 75px;
     overflow-wrap: break-word;
     color: green;

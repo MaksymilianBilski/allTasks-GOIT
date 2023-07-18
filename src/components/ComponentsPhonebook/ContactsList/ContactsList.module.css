@@ -1,7 +1,7 @@
 .contactsList {
     border: 0.25px solid green;
     min-height: 20px;
-    max-width: 320px;
+    width: 320px;
     margin: 20px auto;
     display: flex;
     flex-direction: column;
@@ -12,7 +12,7 @@
 .phonebookHeader {
     display: flex;
     border: solid 3px skyblue;
-    max-width: 250px;
+    width: 250px;
     margin: 20px auto;
     justify-content: center;
 }
