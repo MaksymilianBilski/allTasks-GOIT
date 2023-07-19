@@ -61,7 +61,7 @@ const ImagesFinder = () => {
 
   return (
     <div className={css.ImagesFinderWrapper}>
-      <ReturnHomepage />
+      <ReturnHomepage text='back homepage'/>
       {isLoading === true && <Loader />}
       {isModalOpen ? (
         <Modal handleClose={onModalClose} src={modalFormatSrc} />

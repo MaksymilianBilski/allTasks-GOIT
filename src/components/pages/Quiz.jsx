@@ -5,7 +5,7 @@ export const Quiz = () => {
   
   return (
     <div>
-      <ReturnHomepage />
+      <ReturnHomepage text="back homepage" />
       <QuizLayout />
     </div>
   );
