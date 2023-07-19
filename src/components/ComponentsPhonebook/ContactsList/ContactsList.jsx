@@ -11,7 +11,9 @@ const ContactsList = ({ list, filter, handleRemove }) => {
   });
   return (
     <>
-      <h2 className={css.phonebookHeader}>Your Contacts</h2>
+      <h2 className={css.phonebookHeader}>
+        Your Contacts<p>&darr;</p>
+      </h2>
       <ul className={css.contactsList}>
         {filteredList.map(el => (
           <Contact

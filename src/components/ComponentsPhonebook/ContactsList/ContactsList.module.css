@@ -2,7 +2,7 @@
     border: 0.25px solid green;
     min-height: 20px;
     width: 320px;
-    margin: 20px auto;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,11 +10,24 @@
 }
 
 .phonebookHeader {
+    width: 370px;
+    height: 70px;
+    font-weight: 900;
+    font-size: 30px;
+    margin: 0 auto;
     display: flex;
-    border: solid 3px skyblue;
-    width: 250px;
-    margin: 20px auto;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    border: solid 2px skyblue;
+    -webkit-text-stroke: 1px yellow;
+}
+
+.phonebookHeader p {
+    margin: 0;
+    -webkit-text-stroke: 3px yellow;
+    text-shadow: 2px 2px 3px black, -2px -2px 3px black, -2px 2px 3px black, 2px -2px 3px black;
+    ;
 }
 
 @media screen and (min-width: 768px) {
