@@ -13,6 +13,7 @@ import {
   getFilter,
 } from 'components/ComponentsPhonebook/redux/phonebookSelectors';
 import ReturnHomepage from 'components/Navigation/ReturnHomepage';
+import css from './pagesStyles/Phonebook.module.css';
 document.body.style.backgroundColor = 'rgb(158, 228, 176)';
 
 const Phonebook = () => {
@@ -58,11 +59,12 @@ const Phonebook = () => {
         height: '100vh',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center',
-        marginTop: '-10%',
       }}
     >
-      <ReturnHomepage text="back homepage" />
+      <header>
+        <ReturnHomepage text="back homepage" />
+        <h1>Add and browse your contacts!</h1>
+      </header>
       <SubmitForm handleSubmit={handleSubmit} />
       <ContactsList
         handleRemove={handleRemove}
