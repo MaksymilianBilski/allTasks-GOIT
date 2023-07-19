@@ -1,5 +1,5 @@
-import Contact from '../Contact/Contact';
 import { nanoid } from 'nanoid';
+import Contact from '../Contact/Contact';
 import css from './ContactsList.module.css';
 
 const ContactsList = ({ list, filter, handleRemove }) => {

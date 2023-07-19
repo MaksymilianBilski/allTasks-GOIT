@@ -1,6 +1,6 @@
 import { NavLink, useLocation } from 'react-router-dom';
-import { nanoid } from 'nanoid';
 import css from './Movie.module.css';
+
 const photoURL = 'https://image.tmdb.org/t/p/w500/';
 const substPhotoURL =
   'https://www.csaff.org/wp-content/uploads/csaff-no-poster.jpg';
@@ -9,7 +9,7 @@ const Movie = ({ data }) => {
   const location = useLocation();
 
   return (
-    <li className={css.movieItem} key={nanoid()}>
+    <li className={css.movieItem} key={data.key}>
       <NavLink
         className={css.navLink}
         to={`/allTasks-GOIT/details/${data.id}`}

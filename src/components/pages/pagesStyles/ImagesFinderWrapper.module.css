@@ -1,6 +1,8 @@
 @media screen and (min-width: 320px) and (max-width: 767px) {
     .ImagesFinderWrapper {
-        height: calc(100% + 100em);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
         background-color: blue;
     }
 }

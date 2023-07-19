@@ -4,9 +4,8 @@ import Modal from '../ComponentsImagesFinder/Modal/Modal';
 import { fetchImages } from '../ComponentsImagesFinder/operations/imagesFinderOperation';
 import Searchbar from '../ComponentsImagesFinder/Searchbar/Searchbar';
 import { Loader } from '../ComponentsImagesFinder/Loader/Loader';
-import css from '../ComponentsImagesFinder/ImagesFinderWrapper.module.css';
 import ReturnHomepage from 'components/Navigation/ReturnHomepage';
-
+import css from './pagesStyles/ImagesFinderWrapper.module.css';
 
 const ImagesFinder = () => {
   const [images, setImages] = useState([]);
@@ -61,7 +60,7 @@ const ImagesFinder = () => {
 
   return (
     <div className={css.ImagesFinderWrapper}>
-      <ReturnHomepage text='back homepage'/>
+      <ReturnHomepage text="back homepage" />
       {isLoading === true && <Loader />}
       {isModalOpen ? (
         <Modal handleClose={onModalClose} src={modalFormatSrc} />

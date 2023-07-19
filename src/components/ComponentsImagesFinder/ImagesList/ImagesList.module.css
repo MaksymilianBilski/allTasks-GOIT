@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     justify-content: center;
     grid-gap: 7px;
-    max-width: 100%;
+    background-color: blue;
 }
 
 .btn {

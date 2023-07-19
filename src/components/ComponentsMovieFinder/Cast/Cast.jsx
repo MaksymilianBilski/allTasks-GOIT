@@ -6,6 +6,7 @@ import css from './Cast.module.css';
 
 const photoURL = 'https://image.tmdb.org/t/p/w500/';
 
+//get info about cast list
 const GetPhoto = () => {
   const castContext = <Outlet context={useOutletContext()} />;
   return castContext.props.context;

@@ -3,6 +3,7 @@ import { Outlet, useOutletContext, useParams } from 'react-router-dom';
 import { fetchReviews } from '../operations/operationsMovies';
 import css from './Reviews.module.css';
 
+//get info about reviews list
 const GetPhoto = () => {
   const reviewsContext = <Outlet context={useOutletContext()} />;
   return reviewsContext.props.context;

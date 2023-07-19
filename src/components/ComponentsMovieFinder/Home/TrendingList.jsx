@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
+import { nanoid } from 'nanoid';
 import { fetchTrending } from '../operations/operationsMovies';
 import ReturnHomepage from 'components/Navigation/ReturnHomepage';
 import Movie from '../Movie/Movie';
@@ -12,7 +13,6 @@ const TrendingList = () => {
     try {
       const response = await fetchTrending();
       setTrendingMovies(response.results);
-      console.log(response.results);
       return response.results;
     } catch (e) {
       return;
@@ -40,7 +40,7 @@ const TrendingList = () => {
       <div className={css.listWrapper}>
         <ul className={css.trendingList}>
           {trendingMovies.map(el => (
-            <Movie data={el} />
+            <Movie data={el} key={nanoid()} />
           ))}
         </ul>
       </div>
