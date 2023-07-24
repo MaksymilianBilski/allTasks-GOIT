@@ -23,10 +23,7 @@ export const TaskManager = () => {
 
   return (
     <>
-      <header>
-        {' '}
         <ReturnHomepage text="back homepage" />
-      </header>
       {error ? (
         <div>
           <Navigation />

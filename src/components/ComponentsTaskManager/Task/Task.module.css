@@ -1,13 +1,26 @@
 .listItem {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+
     margin-right: 30px;
     border-bottom: 2px solid green;
     padding: 10px 0;
 }
 
-.listItem>span:nth-child(2) {
+.listItem span:nth-child(1) {
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+    color: yellow;
+}
+
+.listItem span:nth-child(2) {
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+    color: red;
+}
+
+/* .listItem>span:nth-child(2) {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -17,4 +30,4 @@
 .listItem>span:nth-child(1) {
     display: flex;
     max-width: 500px;
-}
+} */

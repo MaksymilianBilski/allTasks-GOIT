@@ -1,3 +1,9 @@
+import QuestionList from '../QuestionList/QuestionList';
+
 export const QuizLayout = () => {
-    return(<div>w trakcie budowy...</div>)
-}
+  return (
+    <div>
+      <QuestionList />w trakcie budowy...
+    </div>
+  );
+};

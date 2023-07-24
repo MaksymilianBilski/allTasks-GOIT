@@ -20,6 +20,9 @@ const Navigation = () => {
         Task manager
       </NavLink>
       <NavLink className={css.navLink} to="/allTasks-GOIT/quiz">
+        <div>
+          <p>In process</p>
+        </div>
         Quiz
       </NavLink>
     </div>

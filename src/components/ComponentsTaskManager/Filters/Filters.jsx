@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { setFilter } from '../redux/filterSlice';
 import Button from 'components/common/Button/Button';
+import css from './Filters.module.css';
 
 const Filters = () => {
   const dispatch = useDispatch();
@@ -11,11 +12,19 @@ const Filters = () => {
   };
 
   return (
-    <section>
+    <section className={css.btnSection}>
       <h3>Filters</h3>
-      <Button handleClick={handleClick} children="all" />
-      <Button handleClick={handleClick} children="active" />
-      <Button handleClick={handleClick} children="completed" />
+      <div>
+        <button onClick={handleClick} className={css.btn}>
+          all
+        </button>
+        <button onClick={handleClick} className={css.btn}>
+          active
+        </button>
+        <button onClick={handleClick} className={css.btn}>
+          completed
+        </button>
+      </div>
     </section>
   );
 };

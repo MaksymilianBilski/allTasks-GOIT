@@ -21,9 +21,8 @@ const Task = ({ task, text, isCompleted }) => {
     <li key={task.id} className={css.listItem}>
       <span>{text}</span>
       <span>Completed: </span>
-
       <input onChange={handleToggle} type="checkbox" checked={isCompleted} />
-      <Button handleClick={handleClose} children="X" />
+      <button onClick={handleClose}>X</button>
     </li>
   );
 };

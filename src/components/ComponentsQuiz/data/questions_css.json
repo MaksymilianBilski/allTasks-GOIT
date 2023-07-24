@@ -1,0 +1,39 @@
+{
+    "Questions": [
+        {
+            "text": "Co to jest reguła css?",
+            "id": "1",
+            "boolean": "false"
+        },
+        {
+            "text": "Na jakie części dzieli się reguła kodu css?",
+            "id": "2",
+            "boolean": "false"
+        },
+        {
+            "text": "Co znaczy pojęcie critical css?",
+            "id": "3",
+            "boolean": "false"
+        }
+    ],
+    "Answers": {
+        "1": [
+            "Regułą nazywamy kod bloku css",
+            "Reguła to schemat pisania kodu css",
+            "Reguła to inna nazwa na css",
+            "Reguła to wartość w css",
+            "Reguła to właściwość w css"
+        ],
+        "2": [
+            "Właściwość i wartość",
+            "Właściwość i własność",
+            "Własność, właściwość i skalowalność",
+            "Skalowalność, własność, jednoznaczność"
+        ],
+        "3": [
+            "To metoda dodawania najważniejszych styli bezpośrednio do dokumentu HTML.",
+            "To metoda używania css tylko w konieczności",
+            "To metoda css "
+        ]
+    }
+}
