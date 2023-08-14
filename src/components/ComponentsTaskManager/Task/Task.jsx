@@ -1,4 +1,3 @@
-import Button from 'components/common/Button/Button';
 import { useDispatch } from 'react-redux';
 import {
   toggleCompleted,

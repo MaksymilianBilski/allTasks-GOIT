@@ -13,7 +13,6 @@ import {
   getFilter,
 } from 'components/ComponentsPhonebook/redux/phonebookSelectors';
 import ReturnHomepage from 'components/Navigation/ReturnHomepage';
-import css from './pagesStyles/Phonebook.module.css';
 document.body.style.backgroundColor = 'rgb(158, 228, 176)';
 
 const Phonebook = () => {

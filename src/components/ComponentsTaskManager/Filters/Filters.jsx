@@ -1,6 +1,5 @@
 import { useDispatch } from 'react-redux';
 import { setFilter } from '../redux/filterSlice';
-import Button from 'components/common/Button/Button';
 import css from './Filters.module.css';
 
 const Filters = () => {

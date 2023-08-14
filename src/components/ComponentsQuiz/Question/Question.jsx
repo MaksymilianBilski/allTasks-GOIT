@@ -2,7 +2,6 @@ import {
   AnswerPanelBoolean,
   AnswerPanelMultiple,
 } from '../AnswerPanel/AnswerPanel';
-import questionsCss from '../data/questions_css.json';
 
 const Question = ({ quizType, question }) => {
   return (
