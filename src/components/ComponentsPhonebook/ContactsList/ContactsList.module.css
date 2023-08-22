@@ -10,7 +10,7 @@
 }
 
 .phonebookHeader {
-    width: 370px;
+    width: 315px;
     height: 70px;
     font-weight: 900;
     font-size: 30px;
@@ -28,6 +28,12 @@
     -webkit-text-stroke: 3px yellow;
     text-shadow: 2px 2px 3px black, -2px -2px 3px black, -2px 2px 3px black, 2px -2px 3px black;
     ;
+}
+
+@media (width >=480px) {
+    .phonebookHeader {
+        width: 430px;
+    }
 }
 
 @media screen and (min-width: 768px) {

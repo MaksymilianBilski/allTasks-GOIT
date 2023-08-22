@@ -1,11 +1,23 @@
 .form {
     display: flex;
-    width: 500px;
+    width: 315px;
     height: 100px;
     margin: 0 auto;
     padding-bottom: 10px;
     border-radius: 10px;
     background-color: rgb(96, 240, 12);
+}
+
+@media (width >=480px) {
+    .form {
+        width: 430px;
+    }
+}
+
+@media (width >=767px) {
+    .form {
+        width: 500px;
+    }
 }
 
 .inputWrapper {

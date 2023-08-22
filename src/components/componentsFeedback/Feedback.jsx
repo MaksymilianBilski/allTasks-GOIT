@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import LeaveFeedback from './LeaveFeedback/LeaveFeedback';
 import Section from './Section/section';
 import StatisticList from './StatisticList/StatisticList';
@@ -11,13 +11,16 @@ const Feedback = () => {
   const [total, setTotal] = useState();
   const [positive, setPositive] = useState();
 
+  useEffect(() => {
+    countPositiveFeedback();
+  });
+
   const handleAddFeedback = evt => {
     const btnName = evt.target.textContent.toLowerCase();
     setStat(prevState => {
       return { ...prevState, [btnName]: prevState[btnName] + 1 };
     });
     countTotalFeedback();
-    countPositiveFeedback();
   };
 
   const countTotalFeedback = () => {
