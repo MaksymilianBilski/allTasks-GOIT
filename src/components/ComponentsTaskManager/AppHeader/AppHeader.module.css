@@ -1,4 +1,9 @@
 .headerWrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    width: 100vw;
+}
+
+@media (width >=767px) {
+    .headerWrapper {}
 }

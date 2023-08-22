@@ -1,9 +1,36 @@
+.btnSection h3 {
+    display: flex;
+    justify-content: center;
+}
+
 .btnSection div {
     display: flex;
     flex-direction: column;
+    margin-right: 3px;
 }
 
 .btn {
-    width: 100px;
-    height: 35px;
+    width: 60px;
+    height: 20px;
+    font-size: 11px;
+}
+
+@media (width >=480px) {
+    .btn {
+        width: 80px;
+        height: 35px;
+    }
+}
+
+@media (width >=767px) {
+    .btn {
+        width: 100px;
+        height: 35px;
+    }
+}
+
+@media (width >=767px) {
+    .btnSection div {
+        flex-direction: row;
+    }
 }

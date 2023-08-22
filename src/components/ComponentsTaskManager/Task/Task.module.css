@@ -1,9 +1,21 @@
 .listItem {
     display: flex;
-
-    margin-right: 30px;
+    width: 300px;
+    margin: 0 auto;
     border-bottom: 2px solid green;
     padding: 10px 0;
+}
+
+@media (width >=480px) {
+    .listItem {
+        width: 450px;
+    }
+}
+
+@media (width >=767px) {
+    .listItem {
+        width: 550px;
+    }
 }
 
 .listItem span:nth-child(1) {

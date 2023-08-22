@@ -23,18 +23,25 @@ export const TaskManager = () => {
 
   return (
     <>
-        <ReturnHomepage text="back homepage" />
+      <ReturnHomepage text="back homepage" />
       {error ? (
         <div>
           <Navigation />
           <span>something went wrong</span>
         </div>
       ) : (
-        <>
+        <div
+          style={{
+            border: '2px solid black',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
           <AppHeader />
           <TaskForm />
           {isLoading ? <Loader /> : <TasksList />}
-        </>
+        </div>
       )}
     </>
   );
