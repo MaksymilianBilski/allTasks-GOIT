@@ -19,12 +19,6 @@ const Navigation = () => {
       <NavLink className={css.navLink} to="/allTasks-GOIT/tasksManager">
         Task manager
       </NavLink>
-      <NavLink className={css.navLink} to="/allTasks-GOIT/quiz">
-        <div>
-          <p>In process</p>
-        </div>
-        Quiz
-      </NavLink>
     </div>
   );
 };

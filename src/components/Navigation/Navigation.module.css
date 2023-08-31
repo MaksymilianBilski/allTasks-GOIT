@@ -44,42 +44,6 @@
     margin-bottom: 15px;
 }
 
-
-/* unfinished component*/
-.navLink:last-child {
-    background-color: rgb(117, 113, 113);
-    color: black;
-    -webkit-text-stroke: 0px;
-}
-
-.navLink:last-child:hover {
-    color: black;
-    text-shadow: 0;
-    background-color: rgb(117, 113, 113);
-    scale: 1;
-    box-shadow: none;
-    text-shadow: none;
-}
-
-.navLink:last-child div {
-    position: absolute;
-    visibility: hidden;
-}
-
-.navLink:last-child:hover div {
-    border-radius: 20%;
-    width: 100%;
-    height: 100%;
-    border: 1px solid gray;
-    background-color: darkgray;
-    visibility: visible;
-    color: gray;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
 @media screen and (min-width: 767px) {
     .navLink {
         -webkit-text-stroke: 1.75px rgb(65, 2, 2);
